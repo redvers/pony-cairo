@@ -1,0 +1,16 @@
+<renderstructs>
+  <renderstruct id="_8055" render="1"/><!-- Cairo f307 -->
+  <renderstruct id="_8057" render="1"/><!-- Cairosurface f307 -->
+  <renderstruct id="_8059" render="1"/><!-- Cairodevice f307 -->
+  <renderstruct id="_8061" render="1"/><!-- Cairomatrix f307 -->
+  <renderstruct id="_8063" render="1"/><!-- Cairopattern f307 -->
+  <renderstruct id="_8066" render="1"/><!-- Cairouserdatakey f307 -->
+  <renderstruct id="_8076" render="1"/><!-- Cairorectangleint f307 -->
+  <renderstruct id="_8155" render="1"/><!-- Cairorectangle f307 -->
+  <renderstruct id="_8157" render="1"/><!-- Cairorectanglelist f307 -->
+  <renderstruct id="_8163" render="1"/><!-- Cairoscaledfont f307 -->
+  <renderstruct id="_8165" render="1"/><!-- Cairofontface f307 -->
+  <renderstruct id="_8191" render="1"/><!-- Cairofontoptions f307 -->
+  <renderstruct id="_8291" render="1"/><!-- Cairopath f307 -->
+  <renderstruct id="_8453" render="1"/><!-- Cairoregion f307 -->
+</renderstructs>

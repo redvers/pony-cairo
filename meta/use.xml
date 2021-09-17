@@ -1,0 +1,3376 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<castxml2pony xmlns:xi="http://www.w3.org/2001/XInclude">
+<xi:include href="./renderuse.xml"/>
+<xi:include href="./usetypes.xml"/>
+<xi:include href="./gtk4.xml"/>
+                    <uses>
+                      <use id="_8052" name="cairo_version"
+     ponyname="cairo_version"
+     fid="f307"
+     lineno="86"
+     rv="I32">
+     <useargs/>
+  </use>
+  <use id="_8053" name="cairo_version_string"
+     ponyname="cairo_version_string"
+     fid="f307"
+     lineno="89"
+     rv="Pointer[U8]">
+     <useargs/>
+  </use>
+  <use id="_8078" name="cairo_create"
+     ponyname="cairo_create"
+     fid="f307"
+     lineno="491"
+     rv="NullablePointer[Cairo]">
+     <useargs>
+       <usearg name="target" type="NullablePointer[Cairosurface]"/>
+     </useargs>
+  </use>
+  <use id="_8079" name="cairo_reference"
+     ponyname="cairo_reference"
+     fid="f307"
+     lineno="494"
+     rv="NullablePointer[Cairo]">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+     </useargs>
+  </use>
+  <use id="_8080" name="cairo_destroy"
+     ponyname="cairo_destroy"
+     fid="f307"
+     lineno="497"
+     rv="None">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+     </useargs>
+  </use>
+  <use id="_8081" name="cairo_get_reference_count"
+     ponyname="cairo_get_reference_count"
+     fid="f307"
+     lineno="500"
+     rv="U32">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+     </useargs>
+  </use>
+  <use id="_8082" name="cairo_get_user_data"
+     ponyname="cairo_get_user_data"
+     fid="f307"
+     lineno="503"
+     rv="Pointer[None]">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+       <usearg name="key" type="NullablePointer[Cairouserdatakey]"/>
+     </useargs>
+  </use>
+  <use id="_8083" name="cairo_set_user_data"
+     ponyname="cairo_set_user_data"
+     fid="f307"
+     lineno="507"
+     rv="I32">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+       <usearg name="key" type="NullablePointer[Cairouserdatakey]"/>
+       <usearg name="userdata" type="Pointer[None]"/>
+       <usearg name="destroy" type="NullablePointer[FUNCTIONTYPE]"/>
+     </useargs>
+  </use>
+  <use id="_8084" name="cairo_save"
+     ponyname="cairo_save"
+     fid="f307"
+     lineno="513"
+     rv="None">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+     </useargs>
+  </use>
+  <use id="_8085" name="cairo_restore"
+     ponyname="cairo_restore"
+     fid="f307"
+     lineno="516"
+     rv="None">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+     </useargs>
+  </use>
+  <use id="_8086" name="cairo_push_group"
+     ponyname="cairo_push_group"
+     fid="f307"
+     lineno="519"
+     rv="None">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+     </useargs>
+  </use>
+  <use id="_8087" name="cairo_push_group_with_content"
+     ponyname="cairo_push_group_with_content"
+     fid="f307"
+     lineno="522"
+     rv="None">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+       <usearg name="content" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_8088" name="cairo_pop_group"
+     ponyname="cairo_pop_group"
+     fid="f307"
+     lineno="525"
+     rv="NullablePointer[Cairopattern]">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+     </useargs>
+  </use>
+  <use id="_8089" name="cairo_pop_group_to_source"
+     ponyname="cairo_pop_group_to_source"
+     fid="f307"
+     lineno="528"
+     rv="None">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+     </useargs>
+  </use>
+  <use id="_8092" name="cairo_set_operator"
+     ponyname="cairo_set_operator"
+     fid="f307"
+     lineno="650"
+     rv="None">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+       <usearg name="op" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_8093" name="cairo_set_source"
+     ponyname="cairo_set_source"
+     fid="f307"
+     lineno="653"
+     rv="None">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+       <usearg name="source" type="NullablePointer[Cairopattern]"/>
+     </useargs>
+  </use>
+  <use id="_8094" name="cairo_set_source_rgb"
+     ponyname="cairo_set_source_rgb"
+     fid="f307"
+     lineno="656"
+     rv="None">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+       <usearg name="red" type="F64"/>
+       <usearg name="green" type="F64"/>
+       <usearg name="blue" type="F64"/>
+     </useargs>
+  </use>
+  <use id="_8095" name="cairo_set_source_rgba"
+     ponyname="cairo_set_source_rgba"
+     fid="f307"
+     lineno="659"
+     rv="None">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+       <usearg name="red" type="F64"/>
+       <usearg name="green" type="F64"/>
+       <usearg name="blue" type="F64"/>
+       <usearg name="alpha" type="F64"/>
+     </useargs>
+  </use>
+  <use id="_8096" name="cairo_set_source_surface"
+     ponyname="cairo_set_source_surface"
+     fid="f307"
+     lineno="664"
+     rv="None">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+       <usearg name="surface" type="NullablePointer[Cairosurface]"/>
+       <usearg name="x" type="F64"/>
+       <usearg name="y" type="F64"/>
+     </useargs>
+  </use>
+  <use id="_8097" name="cairo_set_tolerance"
+     ponyname="cairo_set_tolerance"
+     fid="f307"
+     lineno="670"
+     rv="None">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+       <usearg name="tolerance" type="F64"/>
+     </useargs>
+  </use>
+  <use id="_8100" name="cairo_set_antialias"
+     ponyname="cairo_set_antialias"
+     fid="f307"
+     lineno="724"
+     rv="None">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+       <usearg name="antialias" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_8103" name="cairo_set_fill_rule"
+     ponyname="cairo_set_fill_rule"
+     fid="f307"
+     lineno="759"
+     rv="None">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+       <usearg name="fillrule" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_8104" name="cairo_set_line_width"
+     ponyname="cairo_set_line_width"
+     fid="f307"
+     lineno="762"
+     rv="None">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+       <usearg name="width" type="F64"/>
+     </useargs>
+  </use>
+  <use id="_8107" name="cairo_set_line_cap"
+     ponyname="cairo_set_line_cap"
+     fid="f307"
+     lineno="783"
+     rv="None">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+       <usearg name="linecap" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_8110" name="cairo_set_line_join"
+     ponyname="cairo_set_line_join"
+     fid="f307"
+     lineno="807"
+     rv="None">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+       <usearg name="linejoin" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_8111" name="cairo_set_dash"
+     ponyname="cairo_set_dash"
+     fid="f307"
+     lineno="810"
+     rv="None">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+       <usearg name="dashes" type="Pointer[F64]"/>
+       <usearg name="numdashes" type="I32"/>
+       <usearg name="offset" type="F64"/>
+     </useargs>
+  </use>
+  <use id="_8112" name="cairo_set_miter_limit"
+     ponyname="cairo_set_miter_limit"
+     fid="f307"
+     lineno="816"
+     rv="None">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+       <usearg name="limit" type="F64"/>
+     </useargs>
+  </use>
+  <use id="_8113" name="cairo_translate"
+     ponyname="cairo_translate"
+     fid="f307"
+     lineno="819"
+     rv="None">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+       <usearg name="tx" type="F64"/>
+       <usearg name="ty" type="F64"/>
+     </useargs>
+  </use>
+  <use id="_8114" name="cairo_scale"
+     ponyname="cairo_scale"
+     fid="f307"
+     lineno="822"
+     rv="None">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+       <usearg name="sx" type="F64"/>
+       <usearg name="sy" type="F64"/>
+     </useargs>
+  </use>
+  <use id="_8115" name="cairo_rotate"
+     ponyname="cairo_rotate"
+     fid="f307"
+     lineno="825"
+     rv="None">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+       <usearg name="angle" type="F64"/>
+     </useargs>
+  </use>
+  <use id="_8116" name="cairo_transform"
+     ponyname="cairo_transform"
+     fid="f307"
+     lineno="828"
+     rv="None">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+       <usearg name="matrix" type="NullablePointer[Cairomatrix]"/>
+     </useargs>
+  </use>
+  <use id="_8117" name="cairo_set_matrix"
+     ponyname="cairo_set_matrix"
+     fid="f307"
+     lineno="832"
+     rv="None">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+       <usearg name="matrix" type="NullablePointer[Cairomatrix]"/>
+     </useargs>
+  </use>
+  <use id="_8118" name="cairo_identity_matrix"
+     ponyname="cairo_identity_matrix"
+     fid="f307"
+     lineno="836"
+     rv="None">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+     </useargs>
+  </use>
+  <use id="_8119" name="cairo_user_to_device"
+     ponyname="cairo_user_to_device"
+     fid="f307"
+     lineno="839"
+     rv="None">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+       <usearg name="x" type="Pointer[F64]"/>
+       <usearg name="y" type="Pointer[F64]"/>
+     </useargs>
+  </use>
+  <use id="_8120" name="cairo_user_to_device_distance"
+     ponyname="cairo_user_to_device_distance"
+     fid="f307"
+     lineno="842"
+     rv="None">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+       <usearg name="dx" type="Pointer[F64]"/>
+       <usearg name="dy" type="Pointer[F64]"/>
+     </useargs>
+  </use>
+  <use id="_8121" name="cairo_device_to_user"
+     ponyname="cairo_device_to_user"
+     fid="f307"
+     lineno="845"
+     rv="None">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+       <usearg name="x" type="Pointer[F64]"/>
+       <usearg name="y" type="Pointer[F64]"/>
+     </useargs>
+  </use>
+  <use id="_8122" name="cairo_device_to_user_distance"
+     ponyname="cairo_device_to_user_distance"
+     fid="f307"
+     lineno="848"
+     rv="None">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+       <usearg name="dx" type="Pointer[F64]"/>
+       <usearg name="dy" type="Pointer[F64]"/>
+     </useargs>
+  </use>
+  <use id="_8123" name="cairo_new_path"
+     ponyname="cairo_new_path"
+     fid="f307"
+     lineno="852"
+     rv="None">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+     </useargs>
+  </use>
+  <use id="_8124" name="cairo_move_to"
+     ponyname="cairo_move_to"
+     fid="f307"
+     lineno="855"
+     rv="None">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+       <usearg name="x" type="F64"/>
+       <usearg name="y" type="F64"/>
+     </useargs>
+  </use>
+  <use id="_8125" name="cairo_new_sub_path"
+     ponyname="cairo_new_sub_path"
+     fid="f307"
+     lineno="858"
+     rv="None">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+     </useargs>
+  </use>
+  <use id="_8126" name="cairo_line_to"
+     ponyname="cairo_line_to"
+     fid="f307"
+     lineno="861"
+     rv="None">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+       <usearg name="x" type="F64"/>
+       <usearg name="y" type="F64"/>
+     </useargs>
+  </use>
+  <use id="_8127" name="cairo_curve_to"
+     ponyname="cairo_curve_to"
+     fid="f307"
+     lineno="864"
+     rv="None">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+       <usearg name="x1" type="F64"/>
+       <usearg name="y1" type="F64"/>
+       <usearg name="x2" type="F64"/>
+       <usearg name="y2" type="F64"/>
+       <usearg name="x3" type="F64"/>
+       <usearg name="y3" type="F64"/>
+     </useargs>
+  </use>
+  <use id="_8128" name="cairo_arc"
+     ponyname="cairo_arc"
+     fid="f307"
+     lineno="870"
+     rv="None">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+       <usearg name="xc" type="F64"/>
+       <usearg name="yc" type="F64"/>
+       <usearg name="radius" type="F64"/>
+       <usearg name="angle1" type="F64"/>
+       <usearg name="angle2" type="F64"/>
+     </useargs>
+  </use>
+  <use id="_8129" name="cairo_arc_negative"
+     ponyname="cairo_arc_negative"
+     fid="f307"
+     lineno="876"
+     rv="None">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+       <usearg name="xc" type="F64"/>
+       <usearg name="yc" type="F64"/>
+       <usearg name="radius" type="F64"/>
+       <usearg name="angle1" type="F64"/>
+       <usearg name="angle2" type="F64"/>
+     </useargs>
+  </use>
+  <use id="_8130" name="cairo_rel_move_to"
+     ponyname="cairo_rel_move_to"
+     fid="f307"
+     lineno="890"
+     rv="None">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+       <usearg name="dx" type="F64"/>
+       <usearg name="dy" type="F64"/>
+     </useargs>
+  </use>
+  <use id="_8131" name="cairo_rel_line_to"
+     ponyname="cairo_rel_line_to"
+     fid="f307"
+     lineno="893"
+     rv="None">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+       <usearg name="dx" type="F64"/>
+       <usearg name="dy" type="F64"/>
+     </useargs>
+  </use>
+  <use id="_8132" name="cairo_rel_curve_to"
+     ponyname="cairo_rel_curve_to"
+     fid="f307"
+     lineno="896"
+     rv="None">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+       <usearg name="dx1" type="F64"/>
+       <usearg name="dy1" type="F64"/>
+       <usearg name="dx2" type="F64"/>
+       <usearg name="dy2" type="F64"/>
+       <usearg name="dx3" type="F64"/>
+       <usearg name="dy3" type="F64"/>
+     </useargs>
+  </use>
+  <use id="_8133" name="cairo_rectangle"
+     ponyname="cairo_rectangle"
+     fid="f307"
+     lineno="902"
+     rv="None">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+       <usearg name="x" type="F64"/>
+       <usearg name="y" type="F64"/>
+       <usearg name="width" type="F64"/>
+       <usearg name="height" type="F64"/>
+     </useargs>
+  </use>
+  <use id="_8134" name="cairo_close_path"
+     ponyname="cairo_close_path"
+     fid="f307"
+     lineno="912"
+     rv="None">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+     </useargs>
+  </use>
+  <use id="_8135" name="cairo_path_extents"
+     ponyname="cairo_path_extents"
+     fid="f307"
+     lineno="915"
+     rv="None">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+       <usearg name="x1" type="Pointer[F64]"/>
+       <usearg name="y1" type="Pointer[F64]"/>
+       <usearg name="x2" type="Pointer[F64]"/>
+       <usearg name="y2" type="Pointer[F64]"/>
+     </useargs>
+  </use>
+  <use id="_8136" name="cairo_paint"
+     ponyname="cairo_paint"
+     fid="f307"
+     lineno="921"
+     rv="None">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+     </useargs>
+  </use>
+  <use id="_8137" name="cairo_paint_with_alpha"
+     ponyname="cairo_paint_with_alpha"
+     fid="f307"
+     lineno="924"
+     rv="None">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+       <usearg name="alpha" type="F64"/>
+     </useargs>
+  </use>
+  <use id="_8138" name="cairo_mask"
+     ponyname="cairo_mask"
+     fid="f307"
+     lineno="928"
+     rv="None">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+       <usearg name="pattern" type="NullablePointer[Cairopattern]"/>
+     </useargs>
+  </use>
+  <use id="_8139" name="cairo_mask_surface"
+     ponyname="cairo_mask_surface"
+     fid="f307"
+     lineno="932"
+     rv="None">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+       <usearg name="surface" type="NullablePointer[Cairosurface]"/>
+       <usearg name="surfacex" type="F64"/>
+       <usearg name="surfacey" type="F64"/>
+     </useargs>
+  </use>
+  <use id="_8140" name="cairo_stroke"
+     ponyname="cairo_stroke"
+     fid="f307"
+     lineno="938"
+     rv="None">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+     </useargs>
+  </use>
+  <use id="_8141" name="cairo_stroke_preserve"
+     ponyname="cairo_stroke_preserve"
+     fid="f307"
+     lineno="941"
+     rv="None">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+     </useargs>
+  </use>
+  <use id="_8142" name="cairo_fill"
+     ponyname="cairo_fill"
+     fid="f307"
+     lineno="944"
+     rv="None">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+     </useargs>
+  </use>
+  <use id="_8143" name="cairo_fill_preserve"
+     ponyname="cairo_fill_preserve"
+     fid="f307"
+     lineno="947"
+     rv="None">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+     </useargs>
+  </use>
+  <use id="_8144" name="cairo_copy_page"
+     ponyname="cairo_copy_page"
+     fid="f307"
+     lineno="950"
+     rv="None">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+     </useargs>
+  </use>
+  <use id="_8145" name="cairo_show_page"
+     ponyname="cairo_show_page"
+     fid="f307"
+     lineno="953"
+     rv="None">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+     </useargs>
+  </use>
+  <use id="_8146" name="cairo_in_stroke"
+     ponyname="cairo_in_stroke"
+     fid="f307"
+     lineno="957"
+     rv="I32">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+       <usearg name="x" type="F64"/>
+       <usearg name="y" type="F64"/>
+     </useargs>
+  </use>
+  <use id="_8147" name="cairo_in_fill"
+     ponyname="cairo_in_fill"
+     fid="f307"
+     lineno="960"
+     rv="I32">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+       <usearg name="x" type="F64"/>
+       <usearg name="y" type="F64"/>
+     </useargs>
+  </use>
+  <use id="_8148" name="cairo_in_clip"
+     ponyname="cairo_in_clip"
+     fid="f307"
+     lineno="963"
+     rv="I32">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+       <usearg name="x" type="F64"/>
+       <usearg name="y" type="F64"/>
+     </useargs>
+  </use>
+  <use id="_8149" name="cairo_stroke_extents"
+     ponyname="cairo_stroke_extents"
+     fid="f307"
+     lineno="967"
+     rv="None">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+       <usearg name="x1" type="Pointer[F64]"/>
+       <usearg name="y1" type="Pointer[F64]"/>
+       <usearg name="x2" type="Pointer[F64]"/>
+       <usearg name="y2" type="Pointer[F64]"/>
+     </useargs>
+  </use>
+  <use id="_8150" name="cairo_fill_extents"
+     ponyname="cairo_fill_extents"
+     fid="f307"
+     lineno="972"
+     rv="None">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+       <usearg name="x1" type="Pointer[F64]"/>
+       <usearg name="y1" type="Pointer[F64]"/>
+       <usearg name="x2" type="Pointer[F64]"/>
+       <usearg name="y2" type="Pointer[F64]"/>
+     </useargs>
+  </use>
+  <use id="_8151" name="cairo_reset_clip"
+     ponyname="cairo_reset_clip"
+     fid="f307"
+     lineno="978"
+     rv="None">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+     </useargs>
+  </use>
+  <use id="_8152" name="cairo_clip"
+     ponyname="cairo_clip"
+     fid="f307"
+     lineno="981"
+     rv="None">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+     </useargs>
+  </use>
+  <use id="_8153" name="cairo_clip_preserve"
+     ponyname="cairo_clip_preserve"
+     fid="f307"
+     lineno="984"
+     rv="None">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+     </useargs>
+  </use>
+  <use id="_8154" name="cairo_clip_extents"
+     ponyname="cairo_clip_extents"
+     fid="f307"
+     lineno="987"
+     rv="None">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+       <usearg name="x1" type="Pointer[F64]"/>
+       <usearg name="y1" type="Pointer[F64]"/>
+       <usearg name="x2" type="Pointer[F64]"/>
+       <usearg name="y2" type="Pointer[F64]"/>
+     </useargs>
+  </use>
+  <use id="_8159" name="cairo_copy_clip_rectangle_list"
+     ponyname="cairo_copy_clip_rectangle_list"
+     fid="f307"
+     lineno="1024"
+     rv="NullablePointer[Cairorectanglelist]">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+     </useargs>
+  </use>
+  <use id="_8160" name="cairo_rectangle_list_destroy"
+     ponyname="cairo_rectangle_list_destroy"
+     fid="f307"
+     lineno="1027"
+     rv="None">
+     <useargs>
+       <usearg name="rectanglelist" type="NullablePointer[Cairorectanglelist]"/>
+     </useargs>
+  </use>
+  <use id="_8161" name="cairo_tag_begin"
+     ponyname="cairo_tag_begin"
+     fid="f307"
+     lineno="1035"
+     rv="None">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+       <usearg name="tagname" type="Pointer[U8]"/>
+       <usearg name="attributes" type="Pointer[U8]"/>
+     </useargs>
+  </use>
+  <use id="_8162" name="cairo_tag_end"
+     ponyname="cairo_tag_end"
+     fid="f307"
+     lineno="1038"
+     rv="None">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+       <usearg name="tagname" type="Pointer[U8]"/>
+     </useargs>
+  </use>
+  <use id="_8169" name="cairo_glyph_allocate"
+     ponyname="cairo_glyph_allocate"
+     fid="f307"
+     lineno="1115"
+     rv="NullablePointer[]">
+     <useargs>
+       <usearg name="numglyphs" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_8170" name="cairo_glyph_free"
+     ponyname="cairo_glyph_free"
+     fid="f307"
+     lineno="1118"
+     rv="None">
+     <useargs>
+       <usearg name="glyphs" type="NullablePointer[]"/>
+     </useargs>
+  </use>
+  <use id="_8173" name="cairo_text_cluster_allocate"
+     ponyname="cairo_text_cluster_allocate"
+     fid="f307"
+     lineno="1146"
+     rv="NullablePointer[]">
+     <useargs>
+       <usearg name="numclusters" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_8174" name="cairo_text_cluster_free"
+     ponyname="cairo_text_cluster_free"
+     fid="f307"
+     lineno="1149"
+     rv="None">
+     <useargs>
+       <usearg name="clusters" type="NullablePointer[]"/>
+     </useargs>
+  </use>
+  <use id="_8193" name="cairo_font_options_create"
+     ponyname="cairo_font_options_create"
+     fid="f307"
+     lineno="1388"
+     rv="NullablePointer[Cairofontoptions]">
+     <useargs/>
+  </use>
+  <use id="_8194" name="cairo_font_options_copy"
+     ponyname="cairo_font_options_copy"
+     fid="f307"
+     lineno="1391"
+     rv="NullablePointer[Cairofontoptions]">
+     <useargs>
+       <usearg name="original" type="NullablePointer[Cairofontoptions]"/>
+     </useargs>
+  </use>
+  <use id="_8195" name="cairo_font_options_destroy"
+     ponyname="cairo_font_options_destroy"
+     fid="f307"
+     lineno="1394"
+     rv="None">
+     <useargs>
+       <usearg name="options" type="NullablePointer[Cairofontoptions]"/>
+     </useargs>
+  </use>
+  <use id="_8196" name="cairo_font_options_status"
+     ponyname="cairo_font_options_status"
+     fid="f307"
+     lineno="1397"
+     rv="I32">
+     <useargs>
+       <usearg name="options" type="NullablePointer[Cairofontoptions]"/>
+     </useargs>
+  </use>
+  <use id="_8197" name="cairo_font_options_merge"
+     ponyname="cairo_font_options_merge"
+     fid="f307"
+     lineno="1400"
+     rv="None">
+     <useargs>
+       <usearg name="options" type="NullablePointer[Cairofontoptions]"/>
+       <usearg name="other" type="NullablePointer[Cairofontoptions]"/>
+     </useargs>
+  </use>
+  <use id="_8198" name="cairo_font_options_equal"
+     ponyname="cairo_font_options_equal"
+     fid="f307"
+     lineno="1403"
+     rv="I32">
+     <useargs>
+       <usearg name="options" type="NullablePointer[Cairofontoptions]"/>
+       <usearg name="other" type="NullablePointer[Cairofontoptions]"/>
+     </useargs>
+  </use>
+  <use id="_8199" name="cairo_font_options_hash"
+     ponyname="cairo_font_options_hash"
+     fid="f307"
+     lineno="1407"
+     rv="U64">
+     <useargs>
+       <usearg name="options" type="NullablePointer[Cairofontoptions]"/>
+     </useargs>
+  </use>
+  <use id="_8200" name="cairo_font_options_set_antialias"
+     ponyname="cairo_font_options_set_antialias"
+     fid="f307"
+     lineno="1410"
+     rv="None">
+     <useargs>
+       <usearg name="options" type="NullablePointer[Cairofontoptions]"/>
+       <usearg name="antialias" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_8201" name="cairo_font_options_get_antialias"
+     ponyname="cairo_font_options_get_antialias"
+     fid="f307"
+     lineno="1413"
+     rv="I32">
+     <useargs>
+       <usearg name="options" type="NullablePointer[Cairofontoptions]"/>
+     </useargs>
+  </use>
+  <use id="_8202" name="cairo_font_options_set_subpixel_order"
+     ponyname="cairo_font_options_set_subpixel_order"
+     fid="f307"
+     lineno="1416"
+     rv="None">
+     <useargs>
+       <usearg name="options" type="NullablePointer[Cairofontoptions]"/>
+       <usearg name="subpixelorder" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_8203" name="cairo_font_options_get_subpixel_order"
+     ponyname="cairo_font_options_get_subpixel_order"
+     fid="f307"
+     lineno="1419"
+     rv="I32">
+     <useargs>
+       <usearg name="options" type="NullablePointer[Cairofontoptions]"/>
+     </useargs>
+  </use>
+  <use id="_8204" name="cairo_font_options_set_hint_style"
+     ponyname="cairo_font_options_set_hint_style"
+     fid="f307"
+     lineno="1422"
+     rv="None">
+     <useargs>
+       <usearg name="options" type="NullablePointer[Cairofontoptions]"/>
+       <usearg name="hintstyle" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_8205" name="cairo_font_options_get_hint_style"
+     ponyname="cairo_font_options_get_hint_style"
+     fid="f307"
+     lineno="1425"
+     rv="I32">
+     <useargs>
+       <usearg name="options" type="NullablePointer[Cairofontoptions]"/>
+     </useargs>
+  </use>
+  <use id="_8206" name="cairo_font_options_set_hint_metrics"
+     ponyname="cairo_font_options_set_hint_metrics"
+     fid="f307"
+     lineno="1428"
+     rv="None">
+     <useargs>
+       <usearg name="options" type="NullablePointer[Cairofontoptions]"/>
+       <usearg name="hintmetrics" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_8207" name="cairo_font_options_get_hint_metrics"
+     ponyname="cairo_font_options_get_hint_metrics"
+     fid="f307"
+     lineno="1431"
+     rv="I32">
+     <useargs>
+       <usearg name="options" type="NullablePointer[Cairofontoptions]"/>
+     </useargs>
+  </use>
+  <use id="_8208" name="cairo_font_options_get_variations"
+     ponyname="cairo_font_options_get_variations"
+     fid="f307"
+     lineno="1434"
+     rv="Pointer[U8]">
+     <useargs>
+       <usearg name="options" type="NullablePointer[Cairofontoptions]"/>
+     </useargs>
+  </use>
+  <use id="_8209" name="cairo_font_options_set_variations"
+     ponyname="cairo_font_options_set_variations"
+     fid="f307"
+     lineno="1437"
+     rv="None">
+     <useargs>
+       <usearg name="options" type="NullablePointer[Cairofontoptions]"/>
+       <usearg name="variations" type="Pointer[U8]"/>
+     </useargs>
+  </use>
+  <use id="_8210" name="cairo_select_font_face"
+     ponyname="cairo_select_font_face"
+     fid="f307"
+     lineno="1444"
+     rv="None">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+       <usearg name="family" type="Pointer[U8]"/>
+       <usearg name="slant" type="I32"/>
+       <usearg name="weight" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_8211" name="cairo_set_font_size"
+     ponyname="cairo_set_font_size"
+     fid="f307"
+     lineno="1450"
+     rv="None">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+       <usearg name="size" type="F64"/>
+     </useargs>
+  </use>
+  <use id="_8212" name="cairo_set_font_matrix"
+     ponyname="cairo_set_font_matrix"
+     fid="f307"
+     lineno="1453"
+     rv="None">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+       <usearg name="matrix" type="NullablePointer[Cairomatrix]"/>
+     </useargs>
+  </use>
+  <use id="_8213" name="cairo_get_font_matrix"
+     ponyname="cairo_get_font_matrix"
+     fid="f307"
+     lineno="1457"
+     rv="None">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+       <usearg name="matrix" type="NullablePointer[Cairomatrix]"/>
+     </useargs>
+  </use>
+  <use id="_8214" name="cairo_set_font_options"
+     ponyname="cairo_set_font_options"
+     fid="f307"
+     lineno="1461"
+     rv="None">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+       <usearg name="options" type="NullablePointer[Cairofontoptions]"/>
+     </useargs>
+  </use>
+  <use id="_8215" name="cairo_get_font_options"
+     ponyname="cairo_get_font_options"
+     fid="f307"
+     lineno="1465"
+     rv="None">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+       <usearg name="options" type="NullablePointer[Cairofontoptions]"/>
+     </useargs>
+  </use>
+  <use id="_8216" name="cairo_set_font_face"
+     ponyname="cairo_set_font_face"
+     fid="f307"
+     lineno="1469"
+     rv="None">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+       <usearg name="fontface" type="NullablePointer[Cairofontface]"/>
+     </useargs>
+  </use>
+  <use id="_8217" name="cairo_get_font_face"
+     ponyname="cairo_get_font_face"
+     fid="f307"
+     lineno="1472"
+     rv="NullablePointer[Cairofontface]">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+     </useargs>
+  </use>
+  <use id="_8218" name="cairo_set_scaled_font"
+     ponyname="cairo_set_scaled_font"
+     fid="f307"
+     lineno="1475"
+     rv="None">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+       <usearg name="scaledfont" type="NullablePointer[Cairoscaledfont]"/>
+     </useargs>
+  </use>
+  <use id="_8219" name="cairo_get_scaled_font"
+     ponyname="cairo_get_scaled_font"
+     fid="f307"
+     lineno="1479"
+     rv="NullablePointer[Cairoscaledfont]">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+     </useargs>
+  </use>
+  <use id="_8220" name="cairo_show_text"
+     ponyname="cairo_show_text"
+     fid="f307"
+     lineno="1482"
+     rv="None">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+       <usearg name="utf8" type="Pointer[U8]"/>
+     </useargs>
+  </use>
+  <use id="_8221" name="cairo_show_glyphs"
+     ponyname="cairo_show_glyphs"
+     fid="f307"
+     lineno="1485"
+     rv="None">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+       <usearg name="glyphs" type="NullablePointer[]"/>
+       <usearg name="numglyphs" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_8222" name="cairo_show_text_glyphs"
+     ponyname="cairo_show_text_glyphs"
+     fid="f307"
+     lineno="1488"
+     rv="None">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+       <usearg name="utf8" type="Pointer[U8]"/>
+       <usearg name="utf8len" type="I32"/>
+       <usearg name="glyphs" type="NullablePointer[]"/>
+       <usearg name="numglyphs" type="I32"/>
+       <usearg name="clusters" type="NullablePointer[]"/>
+       <usearg name="numclusters" type="I32"/>
+       <usearg name="clusterflags" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_8223" name="cairo_text_path"
+     ponyname="cairo_text_path"
+     fid="f307"
+     lineno="1498"
+     rv="None">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+       <usearg name="utf8" type="Pointer[U8]"/>
+     </useargs>
+  </use>
+  <use id="_8224" name="cairo_glyph_path"
+     ponyname="cairo_glyph_path"
+     fid="f307"
+     lineno="1501"
+     rv="None">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+       <usearg name="glyphs" type="NullablePointer[]"/>
+       <usearg name="numglyphs" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_8225" name="cairo_text_extents"
+     ponyname="cairo_text_extents"
+     fid="f307"
+     lineno="1504"
+     rv="None">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+       <usearg name="utf8" type="Pointer[U8]"/>
+       <usearg name="extents" type="NullablePointer[]"/>
+     </useargs>
+  </use>
+  <use id="_8226" name="cairo_glyph_extents"
+     ponyname="cairo_glyph_extents"
+     fid="f307"
+     lineno="1509"
+     rv="None">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+       <usearg name="glyphs" type="NullablePointer[]"/>
+       <usearg name="numglyphs" type="I32"/>
+       <usearg name="extents" type="NullablePointer[]"/>
+     </useargs>
+  </use>
+  <use id="_8227" name="cairo_font_extents"
+     ponyname="cairo_font_extents"
+     fid="f307"
+     lineno="1515"
+     rv="None">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+       <usearg name="extents" type="NullablePointer[]"/>
+     </useargs>
+  </use>
+  <use id="_8228" name="cairo_font_face_reference"
+     ponyname="cairo_font_face_reference"
+     fid="f307"
+     lineno="1521"
+     rv="NullablePointer[Cairofontface]">
+     <useargs>
+       <usearg name="fontface" type="NullablePointer[Cairofontface]"/>
+     </useargs>
+  </use>
+  <use id="_8229" name="cairo_font_face_destroy"
+     ponyname="cairo_font_face_destroy"
+     fid="f307"
+     lineno="1524"
+     rv="None">
+     <useargs>
+       <usearg name="fontface" type="NullablePointer[Cairofontface]"/>
+     </useargs>
+  </use>
+  <use id="_8230" name="cairo_font_face_get_reference_count"
+     ponyname="cairo_font_face_get_reference_count"
+     fid="f307"
+     lineno="1527"
+     rv="U32">
+     <useargs>
+       <usearg name="fontface" type="NullablePointer[Cairofontface]"/>
+     </useargs>
+  </use>
+  <use id="_8231" name="cairo_font_face_status"
+     ponyname="cairo_font_face_status"
+     fid="f307"
+     lineno="1530"
+     rv="I32">
+     <useargs>
+       <usearg name="fontface" type="NullablePointer[Cairofontface]"/>
+     </useargs>
+  </use>
+  <use id="_8234" name="cairo_font_face_get_type"
+     ponyname="cairo_font_face_get_type"
+     fid="f307"
+     lineno="1581"
+     rv="I32">
+     <useargs>
+       <usearg name="fontface" type="NullablePointer[Cairofontface]"/>
+     </useargs>
+  </use>
+  <use id="_8235" name="cairo_font_face_get_user_data"
+     ponyname="cairo_font_face_get_user_data"
+     fid="f307"
+     lineno="1584"
+     rv="Pointer[None]">
+     <useargs>
+       <usearg name="fontface" type="NullablePointer[Cairofontface]"/>
+       <usearg name="key" type="NullablePointer[Cairouserdatakey]"/>
+     </useargs>
+  </use>
+  <use id="_8236" name="cairo_font_face_set_user_data"
+     ponyname="cairo_font_face_set_user_data"
+     fid="f307"
+     lineno="1588"
+     rv="I32">
+     <useargs>
+       <usearg name="fontface" type="NullablePointer[Cairofontface]"/>
+       <usearg name="key" type="NullablePointer[Cairouserdatakey]"/>
+       <usearg name="userdata" type="Pointer[None]"/>
+       <usearg name="destroy" type="NullablePointer[FUNCTIONTYPE]"/>
+     </useargs>
+  </use>
+  <use id="_8237" name="cairo_scaled_font_create"
+     ponyname="cairo_scaled_font_create"
+     fid="f307"
+     lineno="1596"
+     rv="NullablePointer[Cairoscaledfont]">
+     <useargs>
+       <usearg name="fontface" type="NullablePointer[Cairofontface]"/>
+       <usearg name="fontmatrix" type="NullablePointer[Cairomatrix]"/>
+       <usearg name="ctm" type="NullablePointer[Cairomatrix]"/>
+       <usearg name="options" type="NullablePointer[Cairofontoptions]"/>
+     </useargs>
+  </use>
+  <use id="_8238" name="cairo_scaled_font_reference"
+     ponyname="cairo_scaled_font_reference"
+     fid="f307"
+     lineno="1602"
+     rv="NullablePointer[Cairoscaledfont]">
+     <useargs>
+       <usearg name="scaledfont" type="NullablePointer[Cairoscaledfont]"/>
+     </useargs>
+  </use>
+  <use id="_8239" name="cairo_scaled_font_destroy"
+     ponyname="cairo_scaled_font_destroy"
+     fid="f307"
+     lineno="1605"
+     rv="None">
+     <useargs>
+       <usearg name="scaledfont" type="NullablePointer[Cairoscaledfont]"/>
+     </useargs>
+  </use>
+  <use id="_8240" name="cairo_scaled_font_get_reference_count"
+     ponyname="cairo_scaled_font_get_reference_count"
+     fid="f307"
+     lineno="1608"
+     rv="U32">
+     <useargs>
+       <usearg name="scaledfont" type="NullablePointer[Cairoscaledfont]"/>
+     </useargs>
+  </use>
+  <use id="_8241" name="cairo_scaled_font_status"
+     ponyname="cairo_scaled_font_status"
+     fid="f307"
+     lineno="1611"
+     rv="I32">
+     <useargs>
+       <usearg name="scaledfont" type="NullablePointer[Cairoscaledfont]"/>
+     </useargs>
+  </use>
+  <use id="_8242" name="cairo_scaled_font_get_type"
+     ponyname="cairo_scaled_font_get_type"
+     fid="f307"
+     lineno="1614"
+     rv="I32">
+     <useargs>
+       <usearg name="scaledfont" type="NullablePointer[Cairoscaledfont]"/>
+     </useargs>
+  </use>
+  <use id="_8243" name="cairo_scaled_font_get_user_data"
+     ponyname="cairo_scaled_font_get_user_data"
+     fid="f307"
+     lineno="1617"
+     rv="Pointer[None]">
+     <useargs>
+       <usearg name="scaledfont" type="NullablePointer[Cairoscaledfont]"/>
+       <usearg name="key" type="NullablePointer[Cairouserdatakey]"/>
+     </useargs>
+  </use>
+  <use id="_8244" name="cairo_scaled_font_set_user_data"
+     ponyname="cairo_scaled_font_set_user_data"
+     fid="f307"
+     lineno="1621"
+     rv="I32">
+     <useargs>
+       <usearg name="scaledfont" type="NullablePointer[Cairoscaledfont]"/>
+       <usearg name="key" type="NullablePointer[Cairouserdatakey]"/>
+       <usearg name="userdata" type="Pointer[None]"/>
+       <usearg name="destroy" type="NullablePointer[FUNCTIONTYPE]"/>
+     </useargs>
+  </use>
+  <use id="_8245" name="cairo_scaled_font_extents"
+     ponyname="cairo_scaled_font_extents"
+     fid="f307"
+     lineno="1627"
+     rv="None">
+     <useargs>
+       <usearg name="scaledfont" type="NullablePointer[Cairoscaledfont]"/>
+       <usearg name="extents" type="NullablePointer[]"/>
+     </useargs>
+  </use>
+  <use id="_8246" name="cairo_scaled_font_text_extents"
+     ponyname="cairo_scaled_font_text_extents"
+     fid="f307"
+     lineno="1631"
+     rv="None">
+     <useargs>
+       <usearg name="scaledfont" type="NullablePointer[Cairoscaledfont]"/>
+       <usearg name="utf8" type="Pointer[U8]"/>
+       <usearg name="extents" type="NullablePointer[]"/>
+     </useargs>
+  </use>
+  <use id="_8247" name="cairo_scaled_font_glyph_extents"
+     ponyname="cairo_scaled_font_glyph_extents"
+     fid="f307"
+     lineno="1636"
+     rv="None">
+     <useargs>
+       <usearg name="scaledfont" type="NullablePointer[Cairoscaledfont]"/>
+       <usearg name="glyphs" type="NullablePointer[]"/>
+       <usearg name="numglyphs" type="I32"/>
+       <usearg name="extents" type="NullablePointer[]"/>
+     </useargs>
+  </use>
+  <use id="_8248" name="cairo_scaled_font_text_to_glyphs"
+     ponyname="cairo_scaled_font_text_to_glyphs"
+     fid="f307"
+     lineno="1642"
+     rv="I32">
+     <useargs>
+       <usearg name="scaledfont" type="NullablePointer[Cairoscaledfont]"/>
+       <usearg name="x" type="F64"/>
+       <usearg name="y" type="F64"/>
+       <usearg name="utf8" type="Pointer[U8]"/>
+       <usearg name="utf8len" type="I32"/>
+       <usearg name="glyphs" type="NullablePointer[NullablePointer[]]"/>
+       <usearg name="numglyphs" type="Pointer[I32]"/>
+       <usearg name="clusters" type="NullablePointer[NullablePointer[]]"/>
+       <usearg name="numclusters" type="Pointer[I32]"/>
+       <usearg name="clusterflags" type="Pointer[I32]"/>
+     </useargs>
+  </use>
+  <use id="_8249" name="cairo_scaled_font_get_font_face"
+     ponyname="cairo_scaled_font_get_font_face"
+     fid="f307"
+     lineno="1654"
+     rv="NullablePointer[Cairofontface]">
+     <useargs>
+       <usearg name="scaledfont" type="NullablePointer[Cairoscaledfont]"/>
+     </useargs>
+  </use>
+  <use id="_8250" name="cairo_scaled_font_get_font_matrix"
+     ponyname="cairo_scaled_font_get_font_matrix"
+     fid="f307"
+     lineno="1657"
+     rv="None">
+     <useargs>
+       <usearg name="scaledfont" type="NullablePointer[Cairoscaledfont]"/>
+       <usearg name="fontmatrix" type="NullablePointer[Cairomatrix]"/>
+     </useargs>
+  </use>
+  <use id="_8251" name="cairo_scaled_font_get_ctm"
+     ponyname="cairo_scaled_font_get_ctm"
+     fid="f307"
+     lineno="1661"
+     rv="None">
+     <useargs>
+       <usearg name="scaledfont" type="NullablePointer[Cairoscaledfont]"/>
+       <usearg name="ctm" type="NullablePointer[Cairomatrix]"/>
+     </useargs>
+  </use>
+  <use id="_8252" name="cairo_scaled_font_get_scale_matrix"
+     ponyname="cairo_scaled_font_get_scale_matrix"
+     fid="f307"
+     lineno="1665"
+     rv="None">
+     <useargs>
+       <usearg name="scaledfont" type="NullablePointer[Cairoscaledfont]"/>
+       <usearg name="scalematrix" type="NullablePointer[Cairomatrix]"/>
+     </useargs>
+  </use>
+  <use id="_8253" name="cairo_scaled_font_get_font_options"
+     ponyname="cairo_scaled_font_get_font_options"
+     fid="f307"
+     lineno="1669"
+     rv="None">
+     <useargs>
+       <usearg name="scaledfont" type="NullablePointer[Cairoscaledfont]"/>
+       <usearg name="options" type="NullablePointer[Cairofontoptions]"/>
+     </useargs>
+  </use>
+  <use id="_8254" name="cairo_toy_font_face_create"
+     ponyname="cairo_toy_font_face_create"
+     fid="f307"
+     lineno="1676"
+     rv="NullablePointer[Cairofontface]">
+     <useargs>
+       <usearg name="family" type="Pointer[U8]"/>
+       <usearg name="slant" type="I32"/>
+       <usearg name="weight" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_8255" name="cairo_toy_font_face_get_family"
+     ponyname="cairo_toy_font_face_get_family"
+     fid="f307"
+     lineno="1681"
+     rv="Pointer[U8]">
+     <useargs>
+       <usearg name="fontface" type="NullablePointer[Cairofontface]"/>
+     </useargs>
+  </use>
+  <use id="_8256" name="cairo_toy_font_face_get_slant"
+     ponyname="cairo_toy_font_face_get_slant"
+     fid="f307"
+     lineno="1684"
+     rv="I32">
+     <useargs>
+       <usearg name="fontface" type="NullablePointer[Cairofontface]"/>
+     </useargs>
+  </use>
+  <use id="_8257" name="cairo_toy_font_face_get_weight"
+     ponyname="cairo_toy_font_face_get_weight"
+     fid="f307"
+     lineno="1687"
+     rv="I32">
+     <useargs>
+       <usearg name="fontface" type="NullablePointer[Cairofontface]"/>
+     </useargs>
+  </use>
+  <use id="_8258" name="cairo_user_font_face_create"
+     ponyname="cairo_user_font_face_create"
+     fid="f307"
+     lineno="1693"
+     rv="NullablePointer[Cairofontface]">
+     <useargs/>
+  </use>
+  <use id="_8263" name="cairo_user_font_face_set_init_func"
+     ponyname="cairo_user_font_face_set_init_func"
+     fid="f307"
+     lineno="1900"
+     rv="None">
+     <useargs>
+       <usearg name="fontface" type="NullablePointer[Cairofontface]"/>
+       <usearg name="initfunc" type="NullablePointer[FUNCTIONTYPE]"/>
+     </useargs>
+  </use>
+  <use id="_8264" name="cairo_user_font_face_set_render_glyph_func"
+     ponyname="cairo_user_font_face_set_render_glyph_func"
+     fid="f307"
+     lineno="1904"
+     rv="None">
+     <useargs>
+       <usearg name="fontface" type="NullablePointer[Cairofontface]"/>
+       <usearg name="renderglyphfunc" type="NullablePointer[FUNCTIONTYPE]"/>
+     </useargs>
+  </use>
+  <use id="_8265" name="cairo_user_font_face_set_text_to_glyphs_func"
+     ponyname="cairo_user_font_face_set_text_to_glyphs_func"
+     fid="f307"
+     lineno="1908"
+     rv="None">
+     <useargs>
+       <usearg name="fontface" type="NullablePointer[Cairofontface]"/>
+       <usearg name="texttoglyphsfunc" type="NullablePointer[FUNCTIONTYPE]"/>
+     </useargs>
+  </use>
+  <use id="_8266" name="cairo_user_font_face_set_unicode_to_glyph_func"
+     ponyname="cairo_user_font_face_set_unicode_to_glyph_func"
+     fid="f307"
+     lineno="1912"
+     rv="None">
+     <useargs>
+       <usearg name="fontface" type="NullablePointer[Cairofontface]"/>
+       <usearg name="unicodetoglyphfunc" type="NullablePointer[FUNCTIONTYPE]"/>
+     </useargs>
+  </use>
+  <use id="_8267" name="cairo_user_font_face_get_init_func"
+     ponyname="cairo_user_font_face_get_init_func"
+     fid="f307"
+     lineno="1918"
+     rv="NullablePointer[FUNCTIONTYPE]">
+     <useargs>
+       <usearg name="fontface" type="NullablePointer[Cairofontface]"/>
+     </useargs>
+  </use>
+  <use id="_8268" name="cairo_user_font_face_get_render_glyph_func"
+     ponyname="cairo_user_font_face_get_render_glyph_func"
+     fid="f307"
+     lineno="1921"
+     rv="NullablePointer[FUNCTIONTYPE]">
+     <useargs>
+       <usearg name="fontface" type="NullablePointer[Cairofontface]"/>
+     </useargs>
+  </use>
+  <use id="_8269" name="cairo_user_font_face_get_text_to_glyphs_func"
+     ponyname="cairo_user_font_face_get_text_to_glyphs_func"
+     fid="f307"
+     lineno="1924"
+     rv="NullablePointer[FUNCTIONTYPE]">
+     <useargs>
+       <usearg name="fontface" type="NullablePointer[Cairofontface]"/>
+     </useargs>
+  </use>
+  <use id="_8270" name="cairo_user_font_face_get_unicode_to_glyph_func"
+     ponyname="cairo_user_font_face_get_unicode_to_glyph_func"
+     fid="f307"
+     lineno="1927"
+     rv="NullablePointer[FUNCTIONTYPE]">
+     <useargs>
+       <usearg name="fontface" type="NullablePointer[Cairofontface]"/>
+     </useargs>
+  </use>
+  <use id="_8271" name="cairo_get_operator"
+     ponyname="cairo_get_operator"
+     fid="f307"
+     lineno="1933"
+     rv="I32">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+     </useargs>
+  </use>
+  <use id="_8272" name="cairo_get_source"
+     ponyname="cairo_get_source"
+     fid="f307"
+     lineno="1936"
+     rv="NullablePointer[Cairopattern]">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+     </useargs>
+  </use>
+  <use id="_8273" name="cairo_get_tolerance"
+     ponyname="cairo_get_tolerance"
+     fid="f307"
+     lineno="1939"
+     rv="F64">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+     </useargs>
+  </use>
+  <use id="_8274" name="cairo_get_antialias"
+     ponyname="cairo_get_antialias"
+     fid="f307"
+     lineno="1942"
+     rv="I32">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+     </useargs>
+  </use>
+  <use id="_8275" name="cairo_has_current_point"
+     ponyname="cairo_has_current_point"
+     fid="f307"
+     lineno="1945"
+     rv="I32">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+     </useargs>
+  </use>
+  <use id="_8276" name="cairo_get_current_point"
+     ponyname="cairo_get_current_point"
+     fid="f307"
+     lineno="1948"
+     rv="None">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+       <usearg name="x" type="Pointer[F64]"/>
+       <usearg name="y" type="Pointer[F64]"/>
+     </useargs>
+  </use>
+  <use id="_8277" name="cairo_get_fill_rule"
+     ponyname="cairo_get_fill_rule"
+     fid="f307"
+     lineno="1951"
+     rv="I32">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+     </useargs>
+  </use>
+  <use id="_8278" name="cairo_get_line_width"
+     ponyname="cairo_get_line_width"
+     fid="f307"
+     lineno="1954"
+     rv="F64">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+     </useargs>
+  </use>
+  <use id="_8279" name="cairo_get_line_cap"
+     ponyname="cairo_get_line_cap"
+     fid="f307"
+     lineno="1957"
+     rv="I32">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+     </useargs>
+  </use>
+  <use id="_8280" name="cairo_get_line_join"
+     ponyname="cairo_get_line_join"
+     fid="f307"
+     lineno="1960"
+     rv="I32">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+     </useargs>
+  </use>
+  <use id="_8281" name="cairo_get_miter_limit"
+     ponyname="cairo_get_miter_limit"
+     fid="f307"
+     lineno="1963"
+     rv="F64">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+     </useargs>
+  </use>
+  <use id="_8282" name="cairo_get_dash_count"
+     ponyname="cairo_get_dash_count"
+     fid="f307"
+     lineno="1966"
+     rv="I32">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+     </useargs>
+  </use>
+  <use id="_8283" name="cairo_get_dash"
+     ponyname="cairo_get_dash"
+     fid="f307"
+     lineno="1969"
+     rv="None">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+       <usearg name="dashes" type="Pointer[F64]"/>
+       <usearg name="offset" type="Pointer[F64]"/>
+     </useargs>
+  </use>
+  <use id="_8284" name="cairo_get_matrix"
+     ponyname="cairo_get_matrix"
+     fid="f307"
+     lineno="1972"
+     rv="None">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+       <usearg name="matrix" type="NullablePointer[Cairomatrix]"/>
+     </useargs>
+  </use>
+  <use id="_8285" name="cairo_get_target"
+     ponyname="cairo_get_target"
+     fid="f307"
+     lineno="1975"
+     rv="NullablePointer[Cairosurface]">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+     </useargs>
+  </use>
+  <use id="_8286" name="cairo_get_group_target"
+     ponyname="cairo_get_group_target"
+     fid="f307"
+     lineno="1978"
+     rv="NullablePointer[Cairosurface]">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+     </useargs>
+  </use>
+  <use id="_8293" name="cairo_copy_path"
+     ponyname="cairo_copy_path"
+     fid="f307"
+     lineno="2107"
+     rv="NullablePointer[Cairopath]">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+     </useargs>
+  </use>
+  <use id="_8294" name="cairo_copy_path_flat"
+     ponyname="cairo_copy_path_flat"
+     fid="f307"
+     lineno="2110"
+     rv="NullablePointer[Cairopath]">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+     </useargs>
+  </use>
+  <use id="_8295" name="cairo_append_path"
+     ponyname="cairo_append_path"
+     fid="f307"
+     lineno="2113"
+     rv="None">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+       <usearg name="path" type="NullablePointer[Cairopath]"/>
+     </useargs>
+  </use>
+  <use id="_8296" name="cairo_path_destroy"
+     ponyname="cairo_path_destroy"
+     fid="f307"
+     lineno="2117"
+     rv="None">
+     <useargs>
+       <usearg name="path" type="NullablePointer[Cairopath]"/>
+     </useargs>
+  </use>
+  <use id="_8297" name="cairo_status"
+     ponyname="cairo_status"
+     fid="f307"
+     lineno="2122"
+     rv="I32">
+     <useargs>
+       <usearg name="cr" type="NullablePointer[Cairo]"/>
+     </useargs>
+  </use>
+  <use id="_8298" name="cairo_status_to_string"
+     ponyname="cairo_status_to_string"
+     fid="f307"
+     lineno="2125"
+     rv="Pointer[U8]">
+     <useargs>
+       <usearg name="status" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_8299" name="cairo_device_reference"
+     ponyname="cairo_device_reference"
+     fid="f307"
+     lineno="2130"
+     rv="NullablePointer[Cairodevice]">
+     <useargs>
+       <usearg name="device" type="NullablePointer[Cairodevice]"/>
+     </useargs>
+  </use>
+  <use id="_8302" name="cairo_device_get_type"
+     ponyname="cairo_device_get_type"
+     fid="f307"
+     lineno="2177"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[Cairodevice]"/>
+     </useargs>
+  </use>
+  <use id="_8303" name="cairo_device_status"
+     ponyname="cairo_device_status"
+     fid="f307"
+     lineno="2180"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[Cairodevice]"/>
+     </useargs>
+  </use>
+  <use id="_8304" name="cairo_device_acquire"
+     ponyname="cairo_device_acquire"
+     fid="f307"
+     lineno="2183"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[Cairodevice]"/>
+     </useargs>
+  </use>
+  <use id="_8305" name="cairo_device_release"
+     ponyname="cairo_device_release"
+     fid="f307"
+     lineno="2186"
+     rv="None">
+     <useargs>
+       <usearg name="device" type="NullablePointer[Cairodevice]"/>
+     </useargs>
+  </use>
+  <use id="_8306" name="cairo_device_flush"
+     ponyname="cairo_device_flush"
+     fid="f307"
+     lineno="2189"
+     rv="None">
+     <useargs>
+       <usearg name="device" type="NullablePointer[Cairodevice]"/>
+     </useargs>
+  </use>
+  <use id="_8307" name="cairo_device_finish"
+     ponyname="cairo_device_finish"
+     fid="f307"
+     lineno="2192"
+     rv="None">
+     <useargs>
+       <usearg name="device" type="NullablePointer[Cairodevice]"/>
+     </useargs>
+  </use>
+  <use id="_8308" name="cairo_device_destroy"
+     ponyname="cairo_device_destroy"
+     fid="f307"
+     lineno="2195"
+     rv="None">
+     <useargs>
+       <usearg name="device" type="NullablePointer[Cairodevice]"/>
+     </useargs>
+  </use>
+  <use id="_8309" name="cairo_device_get_reference_count"
+     ponyname="cairo_device_get_reference_count"
+     fid="f307"
+     lineno="2198"
+     rv="U32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[Cairodevice]"/>
+     </useargs>
+  </use>
+  <use id="_8310" name="cairo_device_get_user_data"
+     ponyname="cairo_device_get_user_data"
+     fid="f307"
+     lineno="2201"
+     rv="Pointer[None]">
+     <useargs>
+       <usearg name="device" type="NullablePointer[Cairodevice]"/>
+       <usearg name="key" type="NullablePointer[Cairouserdatakey]"/>
+     </useargs>
+  </use>
+  <use id="_8311" name="cairo_device_set_user_data"
+     ponyname="cairo_device_set_user_data"
+     fid="f307"
+     lineno="2205"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[Cairodevice]"/>
+       <usearg name="key" type="NullablePointer[Cairouserdatakey]"/>
+       <usearg name="userdata" type="Pointer[None]"/>
+       <usearg name="destroy" type="NullablePointer[FUNCTIONTYPE]"/>
+     </useargs>
+  </use>
+  <use id="_8312" name="cairo_surface_create_similar"
+     ponyname="cairo_surface_create_similar"
+     fid="f307"
+     lineno="2214"
+     rv="NullablePointer[Cairosurface]">
+     <useargs>
+       <usearg name="other" type="NullablePointer[Cairosurface]"/>
+       <usearg name="content" type="I32"/>
+       <usearg name="width" type="I32"/>
+       <usearg name="height" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_8313" name="cairo_surface_create_similar_image"
+     ponyname="cairo_surface_create_similar_image"
+     fid="f307"
+     lineno="2220"
+     rv="NullablePointer[Cairosurface]">
+     <useargs>
+       <usearg name="other" type="NullablePointer[Cairosurface]"/>
+       <usearg name="format" type="I32"/>
+       <usearg name="width" type="I32"/>
+       <usearg name="height" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_8314" name="cairo_surface_map_to_image"
+     ponyname="cairo_surface_map_to_image"
+     fid="f307"
+     lineno="2226"
+     rv="NullablePointer[Cairosurface]">
+     <useargs>
+       <usearg name="surface" type="NullablePointer[Cairosurface]"/>
+       <usearg name="extents" type="NullablePointer[Cairorectangleint]"/>
+     </useargs>
+  </use>
+  <use id="_8315" name="cairo_surface_unmap_image"
+     ponyname="cairo_surface_unmap_image"
+     fid="f307"
+     lineno="2230"
+     rv="None">
+     <useargs>
+       <usearg name="surface" type="NullablePointer[Cairosurface]"/>
+       <usearg name="image" type="NullablePointer[Cairosurface]"/>
+     </useargs>
+  </use>
+  <use id="_8316" name="cairo_surface_create_for_rectangle"
+     ponyname="cairo_surface_create_for_rectangle"
+     fid="f307"
+     lineno="2234"
+     rv="NullablePointer[Cairosurface]">
+     <useargs>
+       <usearg name="target" type="NullablePointer[Cairosurface]"/>
+       <usearg name="x" type="F64"/>
+       <usearg name="y" type="F64"/>
+       <usearg name="width" type="F64"/>
+       <usearg name="height" type="F64"/>
+     </useargs>
+  </use>
+  <use id="_8319" name="cairo_surface_create_observer"
+     ponyname="cairo_surface_create_observer"
+     fid="f307"
+     lineno="2255"
+     rv="NullablePointer[Cairosurface]">
+     <useargs>
+       <usearg name="target" type="NullablePointer[Cairosurface]"/>
+       <usearg name="mode" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_8321" name="cairo_surface_observer_add_paint_callback"
+     ponyname="cairo_surface_observer_add_paint_callback"
+     fid="f307"
+     lineno="2263"
+     rv="I32">
+     <useargs>
+       <usearg name="abstractsurface" type="NullablePointer[Cairosurface]"/>
+       <usearg name="func" type="NullablePointer[FUNCTIONTYPE]"/>
+       <usearg name="data" type="Pointer[None]"/>
+     </useargs>
+  </use>
+  <use id="_8322" name="cairo_surface_observer_add_mask_callback"
+     ponyname="cairo_surface_observer_add_mask_callback"
+     fid="f307"
+     lineno="2268"
+     rv="I32">
+     <useargs>
+       <usearg name="abstractsurface" type="NullablePointer[Cairosurface]"/>
+       <usearg name="func" type="NullablePointer[FUNCTIONTYPE]"/>
+       <usearg name="data" type="Pointer[None]"/>
+     </useargs>
+  </use>
+  <use id="_8323" name="cairo_surface_observer_add_fill_callback"
+     ponyname="cairo_surface_observer_add_fill_callback"
+     fid="f307"
+     lineno="2273"
+     rv="I32">
+     <useargs>
+       <usearg name="abstractsurface" type="NullablePointer[Cairosurface]"/>
+       <usearg name="func" type="NullablePointer[FUNCTIONTYPE]"/>
+       <usearg name="data" type="Pointer[None]"/>
+     </useargs>
+  </use>
+  <use id="_8324" name="cairo_surface_observer_add_stroke_callback"
+     ponyname="cairo_surface_observer_add_stroke_callback"
+     fid="f307"
+     lineno="2278"
+     rv="I32">
+     <useargs>
+       <usearg name="abstractsurface" type="NullablePointer[Cairosurface]"/>
+       <usearg name="func" type="NullablePointer[FUNCTIONTYPE]"/>
+       <usearg name="data" type="Pointer[None]"/>
+     </useargs>
+  </use>
+  <use id="_8325" name="cairo_surface_observer_add_glyphs_callback"
+     ponyname="cairo_surface_observer_add_glyphs_callback"
+     fid="f307"
+     lineno="2283"
+     rv="I32">
+     <useargs>
+       <usearg name="abstractsurface" type="NullablePointer[Cairosurface]"/>
+       <usearg name="func" type="NullablePointer[FUNCTIONTYPE]"/>
+       <usearg name="data" type="Pointer[None]"/>
+     </useargs>
+  </use>
+  <use id="_8326" name="cairo_surface_observer_add_flush_callback"
+     ponyname="cairo_surface_observer_add_flush_callback"
+     fid="f307"
+     lineno="2288"
+     rv="I32">
+     <useargs>
+       <usearg name="abstractsurface" type="NullablePointer[Cairosurface]"/>
+       <usearg name="func" type="NullablePointer[FUNCTIONTYPE]"/>
+       <usearg name="data" type="Pointer[None]"/>
+     </useargs>
+  </use>
+  <use id="_8327" name="cairo_surface_observer_add_finish_callback"
+     ponyname="cairo_surface_observer_add_finish_callback"
+     fid="f307"
+     lineno="2293"
+     rv="I32">
+     <useargs>
+       <usearg name="abstractsurface" type="NullablePointer[Cairosurface]"/>
+       <usearg name="func" type="NullablePointer[FUNCTIONTYPE]"/>
+       <usearg name="data" type="Pointer[None]"/>
+     </useargs>
+  </use>
+  <use id="_8328" name="cairo_surface_observer_print"
+     ponyname="cairo_surface_observer_print"
+     fid="f307"
+     lineno="2298"
+     rv="I32">
+     <useargs>
+       <usearg name="surface" type="NullablePointer[Cairosurface]"/>
+       <usearg name="writefunc" type="NullablePointer[FUNCTIONTYPE]"/>
+       <usearg name="closure" type="Pointer[None]"/>
+     </useargs>
+  </use>
+  <use id="_8329" name="cairo_surface_observer_elapsed"
+     ponyname="cairo_surface_observer_elapsed"
+     fid="f307"
+     lineno="2302"
+     rv="F64">
+     <useargs>
+       <usearg name="surface" type="NullablePointer[Cairosurface]"/>
+     </useargs>
+  </use>
+  <use id="_8330" name="cairo_device_observer_print"
+     ponyname="cairo_device_observer_print"
+     fid="f307"
+     lineno="2305"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[Cairodevice]"/>
+       <usearg name="writefunc" type="NullablePointer[FUNCTIONTYPE]"/>
+       <usearg name="closure" type="Pointer[None]"/>
+     </useargs>
+  </use>
+  <use id="_8331" name="cairo_device_observer_elapsed"
+     ponyname="cairo_device_observer_elapsed"
+     fid="f307"
+     lineno="2310"
+     rv="F64">
+     <useargs>
+       <usearg name="device" type="NullablePointer[Cairodevice]"/>
+     </useargs>
+  </use>
+  <use id="_8332" name="cairo_device_observer_paint_elapsed"
+     ponyname="cairo_device_observer_paint_elapsed"
+     fid="f307"
+     lineno="2313"
+     rv="F64">
+     <useargs>
+       <usearg name="device" type="NullablePointer[Cairodevice]"/>
+     </useargs>
+  </use>
+  <use id="_8333" name="cairo_device_observer_mask_elapsed"
+     ponyname="cairo_device_observer_mask_elapsed"
+     fid="f307"
+     lineno="2316"
+     rv="F64">
+     <useargs>
+       <usearg name="device" type="NullablePointer[Cairodevice]"/>
+     </useargs>
+  </use>
+  <use id="_8334" name="cairo_device_observer_fill_elapsed"
+     ponyname="cairo_device_observer_fill_elapsed"
+     fid="f307"
+     lineno="2319"
+     rv="F64">
+     <useargs>
+       <usearg name="device" type="NullablePointer[Cairodevice]"/>
+     </useargs>
+  </use>
+  <use id="_8335" name="cairo_device_observer_stroke_elapsed"
+     ponyname="cairo_device_observer_stroke_elapsed"
+     fid="f307"
+     lineno="2322"
+     rv="F64">
+     <useargs>
+       <usearg name="device" type="NullablePointer[Cairodevice]"/>
+     </useargs>
+  </use>
+  <use id="_8336" name="cairo_device_observer_glyphs_elapsed"
+     ponyname="cairo_device_observer_glyphs_elapsed"
+     fid="f307"
+     lineno="2325"
+     rv="F64">
+     <useargs>
+       <usearg name="device" type="NullablePointer[Cairodevice]"/>
+     </useargs>
+  </use>
+  <use id="_8337" name="cairo_surface_reference"
+     ponyname="cairo_surface_reference"
+     fid="f307"
+     lineno="2328"
+     rv="NullablePointer[Cairosurface]">
+     <useargs>
+       <usearg name="surface" type="NullablePointer[Cairosurface]"/>
+     </useargs>
+  </use>
+  <use id="_8338" name="cairo_surface_finish"
+     ponyname="cairo_surface_finish"
+     fid="f307"
+     lineno="2331"
+     rv="None">
+     <useargs>
+       <usearg name="surface" type="NullablePointer[Cairosurface]"/>
+     </useargs>
+  </use>
+  <use id="_8339" name="cairo_surface_destroy"
+     ponyname="cairo_surface_destroy"
+     fid="f307"
+     lineno="2334"
+     rv="None">
+     <useargs>
+       <usearg name="surface" type="NullablePointer[Cairosurface]"/>
+     </useargs>
+  </use>
+  <use id="_8340" name="cairo_surface_get_device"
+     ponyname="cairo_surface_get_device"
+     fid="f307"
+     lineno="2337"
+     rv="NullablePointer[Cairodevice]">
+     <useargs>
+       <usearg name="surface" type="NullablePointer[Cairosurface]"/>
+     </useargs>
+  </use>
+  <use id="_8341" name="cairo_surface_get_reference_count"
+     ponyname="cairo_surface_get_reference_count"
+     fid="f307"
+     lineno="2340"
+     rv="U32">
+     <useargs>
+       <usearg name="surface" type="NullablePointer[Cairosurface]"/>
+     </useargs>
+  </use>
+  <use id="_8342" name="cairo_surface_status"
+     ponyname="cairo_surface_status"
+     fid="f307"
+     lineno="2343"
+     rv="I32">
+     <useargs>
+       <usearg name="surface" type="NullablePointer[Cairosurface]"/>
+     </useargs>
+  </use>
+  <use id="_8345" name="cairo_surface_get_type"
+     ponyname="cairo_surface_get_type"
+     fid="f307"
+     lineno="2426"
+     rv="I32">
+     <useargs>
+       <usearg name="surface" type="NullablePointer[Cairosurface]"/>
+     </useargs>
+  </use>
+  <use id="_8346" name="cairo_surface_get_content"
+     ponyname="cairo_surface_get_content"
+     fid="f307"
+     lineno="2429"
+     rv="I32">
+     <useargs>
+       <usearg name="surface" type="NullablePointer[Cairosurface]"/>
+     </useargs>
+  </use>
+  <use id="_8347" name="cairo_surface_write_to_png"
+     ponyname="cairo_surface_write_to_png"
+     fid="f307"
+     lineno="2434"
+     rv="I32">
+     <useargs>
+       <usearg name="surface" type="NullablePointer[Cairosurface]"/>
+       <usearg name="filename" type="Pointer[U8]"/>
+     </useargs>
+  </use>
+  <use id="_8348" name="cairo_surface_write_to_png_stream"
+     ponyname="cairo_surface_write_to_png_stream"
+     fid="f307"
+     lineno="2438"
+     rv="I32">
+     <useargs>
+       <usearg name="surface" type="NullablePointer[Cairosurface]"/>
+       <usearg name="writefunc" type="NullablePointer[FUNCTIONTYPE]"/>
+       <usearg name="closure" type="Pointer[None]"/>
+     </useargs>
+  </use>
+  <use id="_8349" name="cairo_surface_get_user_data"
+     ponyname="cairo_surface_get_user_data"
+     fid="f307"
+     lineno="2445"
+     rv="Pointer[None]">
+     <useargs>
+       <usearg name="surface" type="NullablePointer[Cairosurface]"/>
+       <usearg name="key" type="NullablePointer[Cairouserdatakey]"/>
+     </useargs>
+  </use>
+  <use id="_8350" name="cairo_surface_set_user_data"
+     ponyname="cairo_surface_set_user_data"
+     fid="f307"
+     lineno="2449"
+     rv="I32">
+     <useargs>
+       <usearg name="surface" type="NullablePointer[Cairosurface]"/>
+       <usearg name="key" type="NullablePointer[Cairouserdatakey]"/>
+       <usearg name="userdata" type="Pointer[None]"/>
+       <usearg name="destroy" type="NullablePointer[FUNCTIONTYPE]"/>
+     </useargs>
+  </use>
+  <use id="_8351" name="cairo_surface_get_mime_data"
+     ponyname="cairo_surface_get_mime_data"
+     fid="f307"
+     lineno="2468"
+     rv="None">
+     <useargs>
+       <usearg name="surface" type="NullablePointer[Cairosurface]"/>
+       <usearg name="mimetype" type="Pointer[U8]"/>
+       <usearg name="data" type="NullablePointer[Pointer[U8]]"/>
+       <usearg name="length" type="Pointer[U64]"/>
+     </useargs>
+  </use>
+  <use id="_8352" name="cairo_surface_set_mime_data"
+     ponyname="cairo_surface_set_mime_data"
+     fid="f307"
+     lineno="2474"
+     rv="I32">
+     <useargs>
+       <usearg name="surface" type="NullablePointer[Cairosurface]"/>
+       <usearg name="mimetype" type="Pointer[U8]"/>
+       <usearg name="data" type="Pointer[U8]"/>
+       <usearg name="length" type="U64"/>
+       <usearg name="destroy" type="NullablePointer[FUNCTIONTYPE]"/>
+       <usearg name="closure" type="Pointer[None]"/>
+     </useargs>
+  </use>
+  <use id="_8353" name="cairo_surface_supports_mime_type"
+     ponyname="cairo_surface_supports_mime_type"
+     fid="f307"
+     lineno="2482"
+     rv="I32">
+     <useargs>
+       <usearg name="surface" type="NullablePointer[Cairosurface]"/>
+       <usearg name="mimetype" type="Pointer[U8]"/>
+     </useargs>
+  </use>
+  <use id="_8354" name="cairo_surface_get_font_options"
+     ponyname="cairo_surface_get_font_options"
+     fid="f307"
+     lineno="2486"
+     rv="None">
+     <useargs>
+       <usearg name="surface" type="NullablePointer[Cairosurface]"/>
+       <usearg name="options" type="NullablePointer[Cairofontoptions]"/>
+     </useargs>
+  </use>
+  <use id="_8355" name="cairo_surface_flush"
+     ponyname="cairo_surface_flush"
+     fid="f307"
+     lineno="2490"
+     rv="None">
+     <useargs>
+       <usearg name="surface" type="NullablePointer[Cairosurface]"/>
+     </useargs>
+  </use>
+  <use id="_8356" name="cairo_surface_mark_dirty"
+     ponyname="cairo_surface_mark_dirty"
+     fid="f307"
+     lineno="2493"
+     rv="None">
+     <useargs>
+       <usearg name="surface" type="NullablePointer[Cairosurface]"/>
+     </useargs>
+  </use>
+  <use id="_8357" name="cairo_surface_mark_dirty_rectangle"
+     ponyname="cairo_surface_mark_dirty_rectangle"
+     fid="f307"
+     lineno="2496"
+     rv="None">
+     <useargs>
+       <usearg name="surface" type="NullablePointer[Cairosurface]"/>
+       <usearg name="x" type="I32"/>
+       <usearg name="y" type="I32"/>
+       <usearg name="width" type="I32"/>
+       <usearg name="height" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_8358" name="cairo_surface_set_device_scale"
+     ponyname="cairo_surface_set_device_scale"
+     fid="f307"
+     lineno="2503"
+     rv="None">
+     <useargs>
+       <usearg name="surface" type="NullablePointer[Cairosurface]"/>
+       <usearg name="xscale" type="F64"/>
+       <usearg name="yscale" type="F64"/>
+     </useargs>
+  </use>
+  <use id="_8359" name="cairo_surface_get_device_scale"
+     ponyname="cairo_surface_get_device_scale"
+     fid="f307"
+     lineno="2508"
+     rv="None">
+     <useargs>
+       <usearg name="surface" type="NullablePointer[Cairosurface]"/>
+       <usearg name="xscale" type="Pointer[F64]"/>
+       <usearg name="yscale" type="Pointer[F64]"/>
+     </useargs>
+  </use>
+  <use id="_8360" name="cairo_surface_set_device_offset"
+     ponyname="cairo_surface_set_device_offset"
+     fid="f307"
+     lineno="2513"
+     rv="None">
+     <useargs>
+       <usearg name="surface" type="NullablePointer[Cairosurface]"/>
+       <usearg name="xoffset" type="F64"/>
+       <usearg name="yoffset" type="F64"/>
+     </useargs>
+  </use>
+  <use id="_8361" name="cairo_surface_get_device_offset"
+     ponyname="cairo_surface_get_device_offset"
+     fid="f307"
+     lineno="2518"
+     rv="None">
+     <useargs>
+       <usearg name="surface" type="NullablePointer[Cairosurface]"/>
+       <usearg name="xoffset" type="Pointer[F64]"/>
+       <usearg name="yoffset" type="Pointer[F64]"/>
+     </useargs>
+  </use>
+  <use id="_8362" name="cairo_surface_set_fallback_resolution"
+     ponyname="cairo_surface_set_fallback_resolution"
+     fid="f307"
+     lineno="2523"
+     rv="None">
+     <useargs>
+       <usearg name="surface" type="NullablePointer[Cairosurface]"/>
+       <usearg name="xpixelsperinch" type="F64"/>
+       <usearg name="ypixelsperinch" type="F64"/>
+     </useargs>
+  </use>
+  <use id="_8363" name="cairo_surface_get_fallback_resolution"
+     ponyname="cairo_surface_get_fallback_resolution"
+     fid="f307"
+     lineno="2528"
+     rv="None">
+     <useargs>
+       <usearg name="surface" type="NullablePointer[Cairosurface]"/>
+       <usearg name="xpixelsperinch" type="Pointer[F64]"/>
+       <usearg name="ypixelsperinch" type="Pointer[F64]"/>
+     </useargs>
+  </use>
+  <use id="_8364" name="cairo_surface_copy_page"
+     ponyname="cairo_surface_copy_page"
+     fid="f307"
+     lineno="2533"
+     rv="None">
+     <useargs>
+       <usearg name="surface" type="NullablePointer[Cairosurface]"/>
+     </useargs>
+  </use>
+  <use id="_8365" name="cairo_surface_show_page"
+     ponyname="cairo_surface_show_page"
+     fid="f307"
+     lineno="2536"
+     rv="None">
+     <useargs>
+       <usearg name="surface" type="NullablePointer[Cairosurface]"/>
+     </useargs>
+  </use>
+  <use id="_8366" name="cairo_surface_has_show_text_glyphs"
+     ponyname="cairo_surface_has_show_text_glyphs"
+     fid="f307"
+     lineno="2539"
+     rv="I32">
+     <useargs>
+       <usearg name="surface" type="NullablePointer[Cairosurface]"/>
+     </useargs>
+  </use>
+  <use id="_8367" name="cairo_image_surface_create"
+     ponyname="cairo_image_surface_create"
+     fid="f307"
+     lineno="2544"
+     rv="NullablePointer[Cairosurface]">
+     <useargs>
+       <usearg name="format" type="I32"/>
+       <usearg name="width" type="I32"/>
+       <usearg name="height" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_8368" name="cairo_format_stride_for_width"
+     ponyname="cairo_format_stride_for_width"
+     fid="f307"
+     lineno="2549"
+     rv="I32">
+     <useargs>
+       <usearg name="format" type="I32"/>
+       <usearg name="width" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_8369" name="cairo_image_surface_create_for_data"
+     ponyname="cairo_image_surface_create_for_data"
+     fid="f307"
+     lineno="2553"
+     rv="NullablePointer[Cairosurface]">
+     <useargs>
+       <usearg name="data" type="Pointer[U8]"/>
+       <usearg name="format" type="I32"/>
+       <usearg name="width" type="I32"/>
+       <usearg name="height" type="I32"/>
+       <usearg name="stride" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_8370" name="cairo_image_surface_get_data"
+     ponyname="cairo_image_surface_get_data"
+     fid="f307"
+     lineno="2560"
+     rv="Pointer[U8]">
+     <useargs>
+       <usearg name="surface" type="NullablePointer[Cairosurface]"/>
+     </useargs>
+  </use>
+  <use id="_8371" name="cairo_image_surface_get_format"
+     ponyname="cairo_image_surface_get_format"
+     fid="f307"
+     lineno="2563"
+     rv="I32">
+     <useargs>
+       <usearg name="surface" type="NullablePointer[Cairosurface]"/>
+     </useargs>
+  </use>
+  <use id="_8372" name="cairo_image_surface_get_width"
+     ponyname="cairo_image_surface_get_width"
+     fid="f307"
+     lineno="2566"
+     rv="I32">
+     <useargs>
+       <usearg name="surface" type="NullablePointer[Cairosurface]"/>
+     </useargs>
+  </use>
+  <use id="_8373" name="cairo_image_surface_get_height"
+     ponyname="cairo_image_surface_get_height"
+     fid="f307"
+     lineno="2569"
+     rv="I32">
+     <useargs>
+       <usearg name="surface" type="NullablePointer[Cairosurface]"/>
+     </useargs>
+  </use>
+  <use id="_8374" name="cairo_image_surface_get_stride"
+     ponyname="cairo_image_surface_get_stride"
+     fid="f307"
+     lineno="2572"
+     rv="I32">
+     <useargs>
+       <usearg name="surface" type="NullablePointer[Cairosurface]"/>
+     </useargs>
+  </use>
+  <use id="_8375" name="cairo_image_surface_create_from_png"
+     ponyname="cairo_image_surface_create_from_png"
+     fid="f307"
+     lineno="2577"
+     rv="NullablePointer[Cairosurface]">
+     <useargs>
+       <usearg name="filename" type="Pointer[U8]"/>
+     </useargs>
+  </use>
+  <use id="_8376" name="cairo_image_surface_create_from_png_stream"
+     ponyname="cairo_image_surface_create_from_png_stream"
+     fid="f307"
+     lineno="2580"
+     rv="NullablePointer[Cairosurface]">
+     <useargs>
+       <usearg name="readfunc" type="NullablePointer[FUNCTIONTYPE]"/>
+       <usearg name="closure" type="Pointer[None]"/>
+     </useargs>
+  </use>
+  <use id="_8377" name="cairo_recording_surface_create"
+     ponyname="cairo_recording_surface_create"
+     fid="f307"
+     lineno="2588"
+     rv="NullablePointer[Cairosurface]">
+     <useargs>
+       <usearg name="content" type="I32"/>
+       <usearg name="extents" type="NullablePointer[Cairorectangle]"/>
+     </useargs>
+  </use>
+  <use id="_8378" name="cairo_recording_surface_ink_extents"
+     ponyname="cairo_recording_surface_ink_extents"
+     fid="f307"
+     lineno="2592"
+     rv="None">
+     <useargs>
+       <usearg name="surface" type="NullablePointer[Cairosurface]"/>
+       <usearg name="x0" type="Pointer[F64]"/>
+       <usearg name="y0" type="Pointer[F64]"/>
+       <usearg name="width" type="Pointer[F64]"/>
+       <usearg name="height" type="Pointer[F64]"/>
+     </useargs>
+  </use>
+  <use id="_8379" name="cairo_recording_surface_get_extents"
+     ponyname="cairo_recording_surface_get_extents"
+     fid="f307"
+     lineno="2599"
+     rv="I32">
+     <useargs>
+       <usearg name="surface" type="NullablePointer[Cairosurface]"/>
+       <usearg name="extents" type="NullablePointer[Cairorectangle]"/>
+     </useargs>
+  </use>
+  <use id="_8385" name="cairo_pattern_create_raster_source"
+     ponyname="cairo_pattern_create_raster_source"
+     fid="f307"
+     lineno="2706"
+     rv="NullablePointer[Cairopattern]">
+     <useargs>
+       <usearg name="userdata" type="Pointer[None]"/>
+       <usearg name="content" type="I32"/>
+       <usearg name="width" type="I32"/>
+       <usearg name="height" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_8386" name="cairo_raster_source_pattern_set_callback_data"
+     ponyname="cairo_raster_source_pattern_set_callback_data"
+     fid="f307"
+     lineno="2711"
+     rv="None">
+     <useargs>
+       <usearg name="pattern" type="NullablePointer[Cairopattern]"/>
+       <usearg name="data" type="Pointer[None]"/>
+     </useargs>
+  </use>
+  <use id="_8387" name="cairo_raster_source_pattern_get_callback_data"
+     ponyname="cairo_raster_source_pattern_get_callback_data"
+     fid="f307"
+     lineno="2715"
+     rv="Pointer[None]">
+     <useargs>
+       <usearg name="pattern" type="NullablePointer[Cairopattern]"/>
+     </useargs>
+  </use>
+  <use id="_8388" name="cairo_raster_source_pattern_set_acquire"
+     ponyname="cairo_raster_source_pattern_set_acquire"
+     fid="f307"
+     lineno="2718"
+     rv="None">
+     <useargs>
+       <usearg name="pattern" type="NullablePointer[Cairopattern]"/>
+       <usearg name="acquire" type="NullablePointer[FUNCTIONTYPE]"/>
+       <usearg name="release" type="NullablePointer[FUNCTIONTYPE]"/>
+     </useargs>
+  </use>
+  <use id="_8389" name="cairo_raster_source_pattern_get_acquire"
+     ponyname="cairo_raster_source_pattern_get_acquire"
+     fid="f307"
+     lineno="2723"
+     rv="None">
+     <useargs>
+       <usearg name="pattern" type="NullablePointer[Cairopattern]"/>
+       <usearg name="acquire" type="NullablePointer[NullablePointer[FUNCTIONTYPE]]"/>
+       <usearg name="release" type="NullablePointer[NullablePointer[FUNCTIONTYPE]]"/>
+     </useargs>
+  </use>
+  <use id="_8390" name="cairo_raster_source_pattern_set_snapshot"
+     ponyname="cairo_raster_source_pattern_set_snapshot"
+     fid="f307"
+     lineno="2727"
+     rv="None">
+     <useargs>
+       <usearg name="pattern" type="NullablePointer[Cairopattern]"/>
+       <usearg name="snapshot" type="NullablePointer[FUNCTIONTYPE]"/>
+     </useargs>
+  </use>
+  <use id="_8391" name="cairo_raster_source_pattern_get_snapshot"
+     ponyname="cairo_raster_source_pattern_get_snapshot"
+     fid="f307"
+     lineno="2731"
+     rv="NullablePointer[FUNCTIONTYPE]">
+     <useargs>
+       <usearg name="pattern" type="NullablePointer[Cairopattern]"/>
+     </useargs>
+  </use>
+  <use id="_8392" name="cairo_raster_source_pattern_set_copy"
+     ponyname="cairo_raster_source_pattern_set_copy"
+     fid="f307"
+     lineno="2734"
+     rv="None">
+     <useargs>
+       <usearg name="pattern" type="NullablePointer[Cairopattern]"/>
+       <usearg name="copy" type="NullablePointer[FUNCTIONTYPE]"/>
+     </useargs>
+  </use>
+  <use id="_8393" name="cairo_raster_source_pattern_get_copy"
+     ponyname="cairo_raster_source_pattern_get_copy"
+     fid="f307"
+     lineno="2738"
+     rv="NullablePointer[FUNCTIONTYPE]">
+     <useargs>
+       <usearg name="pattern" type="NullablePointer[Cairopattern]"/>
+     </useargs>
+  </use>
+  <use id="_8394" name="cairo_raster_source_pattern_set_finish"
+     ponyname="cairo_raster_source_pattern_set_finish"
+     fid="f307"
+     lineno="2741"
+     rv="None">
+     <useargs>
+       <usearg name="pattern" type="NullablePointer[Cairopattern]"/>
+       <usearg name="finish" type="NullablePointer[FUNCTIONTYPE]"/>
+     </useargs>
+  </use>
+  <use id="_8395" name="cairo_raster_source_pattern_get_finish"
+     ponyname="cairo_raster_source_pattern_get_finish"
+     fid="f307"
+     lineno="2745"
+     rv="NullablePointer[FUNCTIONTYPE]">
+     <useargs>
+       <usearg name="pattern" type="NullablePointer[Cairopattern]"/>
+     </useargs>
+  </use>
+  <use id="_8396" name="cairo_pattern_create_rgb"
+     ponyname="cairo_pattern_create_rgb"
+     fid="f307"
+     lineno="2750"
+     rv="NullablePointer[Cairopattern]">
+     <useargs>
+       <usearg name="red" type="F64"/>
+       <usearg name="green" type="F64"/>
+       <usearg name="blue" type="F64"/>
+     </useargs>
+  </use>
+  <use id="_8397" name="cairo_pattern_create_rgba"
+     ponyname="cairo_pattern_create_rgba"
+     fid="f307"
+     lineno="2753"
+     rv="NullablePointer[Cairopattern]">
+     <useargs>
+       <usearg name="red" type="F64"/>
+       <usearg name="green" type="F64"/>
+       <usearg name="blue" type="F64"/>
+       <usearg name="alpha" type="F64"/>
+     </useargs>
+  </use>
+  <use id="_8398" name="cairo_pattern_create_for_surface"
+     ponyname="cairo_pattern_create_for_surface"
+     fid="f307"
+     lineno="2757"
+     rv="NullablePointer[Cairopattern]">
+     <useargs>
+       <usearg name="surface" type="NullablePointer[Cairosurface]"/>
+     </useargs>
+  </use>
+  <use id="_8399" name="cairo_pattern_create_linear"
+     ponyname="cairo_pattern_create_linear"
+     fid="f307"
+     lineno="2760"
+     rv="NullablePointer[Cairopattern]">
+     <useargs>
+       <usearg name="x0" type="F64"/>
+       <usearg name="y0" type="F64"/>
+       <usearg name="x1" type="F64"/>
+       <usearg name="y1" type="F64"/>
+     </useargs>
+  </use>
+  <use id="_8400" name="cairo_pattern_create_radial"
+     ponyname="cairo_pattern_create_radial"
+     fid="f307"
+     lineno="2764"
+     rv="NullablePointer[Cairopattern]">
+     <useargs>
+       <usearg name="cx0" type="F64"/>
+       <usearg name="cy0" type="F64"/>
+       <usearg name="radius0" type="F64"/>
+       <usearg name="cx1" type="F64"/>
+       <usearg name="cy1" type="F64"/>
+       <usearg name="radius1" type="F64"/>
+     </useargs>
+  </use>
+  <use id="_8401" name="cairo_pattern_create_mesh"
+     ponyname="cairo_pattern_create_mesh"
+     fid="f307"
+     lineno="2768"
+     rv="NullablePointer[Cairopattern]">
+     <useargs/>
+  </use>
+  <use id="_8402" name="cairo_pattern_reference"
+     ponyname="cairo_pattern_reference"
+     fid="f307"
+     lineno="2771"
+     rv="NullablePointer[Cairopattern]">
+     <useargs>
+       <usearg name="pattern" type="NullablePointer[Cairopattern]"/>
+     </useargs>
+  </use>
+  <use id="_8403" name="cairo_pattern_destroy"
+     ponyname="cairo_pattern_destroy"
+     fid="f307"
+     lineno="2774"
+     rv="None">
+     <useargs>
+       <usearg name="pattern" type="NullablePointer[Cairopattern]"/>
+     </useargs>
+  </use>
+  <use id="_8404" name="cairo_pattern_get_reference_count"
+     ponyname="cairo_pattern_get_reference_count"
+     fid="f307"
+     lineno="2777"
+     rv="U32">
+     <useargs>
+       <usearg name="pattern" type="NullablePointer[Cairopattern]"/>
+     </useargs>
+  </use>
+  <use id="_8405" name="cairo_pattern_status"
+     ponyname="cairo_pattern_status"
+     fid="f307"
+     lineno="2780"
+     rv="I32">
+     <useargs>
+       <usearg name="pattern" type="NullablePointer[Cairopattern]"/>
+     </useargs>
+  </use>
+  <use id="_8406" name="cairo_pattern_get_user_data"
+     ponyname="cairo_pattern_get_user_data"
+     fid="f307"
+     lineno="2783"
+     rv="Pointer[None]">
+     <useargs>
+       <usearg name="pattern" type="NullablePointer[Cairopattern]"/>
+       <usearg name="key" type="NullablePointer[Cairouserdatakey]"/>
+     </useargs>
+  </use>
+  <use id="_8407" name="cairo_pattern_set_user_data"
+     ponyname="cairo_pattern_set_user_data"
+     fid="f307"
+     lineno="2787"
+     rv="I32">
+     <useargs>
+       <usearg name="pattern" type="NullablePointer[Cairopattern]"/>
+       <usearg name="key" type="NullablePointer[Cairouserdatakey]"/>
+       <usearg name="userdata" type="Pointer[None]"/>
+       <usearg name="destroy" type="NullablePointer[FUNCTIONTYPE]"/>
+     </useargs>
+  </use>
+  <use id="_8410" name="cairo_pattern_get_type"
+     ponyname="cairo_pattern_get_type"
+     fid="f307"
+     lineno="2834"
+     rv="I32">
+     <useargs>
+       <usearg name="pattern" type="NullablePointer[Cairopattern]"/>
+     </useargs>
+  </use>
+  <use id="_8411" name="cairo_pattern_add_color_stop_rgb"
+     ponyname="cairo_pattern_add_color_stop_rgb"
+     fid="f307"
+     lineno="2837"
+     rv="None">
+     <useargs>
+       <usearg name="pattern" type="NullablePointer[Cairopattern]"/>
+       <usearg name="offset" type="F64"/>
+       <usearg name="red" type="F64"/>
+       <usearg name="green" type="F64"/>
+       <usearg name="blue" type="F64"/>
+     </useargs>
+  </use>
+  <use id="_8412" name="cairo_pattern_add_color_stop_rgba"
+     ponyname="cairo_pattern_add_color_stop_rgba"
+     fid="f307"
+     lineno="2842"
+     rv="None">
+     <useargs>
+       <usearg name="pattern" type="NullablePointer[Cairopattern]"/>
+       <usearg name="offset" type="F64"/>
+       <usearg name="red" type="F64"/>
+       <usearg name="green" type="F64"/>
+       <usearg name="blue" type="F64"/>
+       <usearg name="alpha" type="F64"/>
+     </useargs>
+  </use>
+  <use id="_8413" name="cairo_mesh_pattern_begin_patch"
+     ponyname="cairo_mesh_pattern_begin_patch"
+     fid="f307"
+     lineno="2848"
+     rv="None">
+     <useargs>
+       <usearg name="pattern" type="NullablePointer[Cairopattern]"/>
+     </useargs>
+  </use>
+  <use id="_8414" name="cairo_mesh_pattern_end_patch"
+     ponyname="cairo_mesh_pattern_end_patch"
+     fid="f307"
+     lineno="2851"
+     rv="None">
+     <useargs>
+       <usearg name="pattern" type="NullablePointer[Cairopattern]"/>
+     </useargs>
+  </use>
+  <use id="_8415" name="cairo_mesh_pattern_curve_to"
+     ponyname="cairo_mesh_pattern_curve_to"
+     fid="f307"
+     lineno="2854"
+     rv="None">
+     <useargs>
+       <usearg name="pattern" type="NullablePointer[Cairopattern]"/>
+       <usearg name="x1" type="F64"/>
+       <usearg name="y1" type="F64"/>
+       <usearg name="x2" type="F64"/>
+       <usearg name="y2" type="F64"/>
+       <usearg name="x3" type="F64"/>
+       <usearg name="y3" type="F64"/>
+     </useargs>
+  </use>
+  <use id="_8416" name="cairo_mesh_pattern_line_to"
+     ponyname="cairo_mesh_pattern_line_to"
+     fid="f307"
+     lineno="2860"
+     rv="None">
+     <useargs>
+       <usearg name="pattern" type="NullablePointer[Cairopattern]"/>
+       <usearg name="x" type="F64"/>
+       <usearg name="y" type="F64"/>
+     </useargs>
+  </use>
+  <use id="_8417" name="cairo_mesh_pattern_move_to"
+     ponyname="cairo_mesh_pattern_move_to"
+     fid="f307"
+     lineno="2864"
+     rv="None">
+     <useargs>
+       <usearg name="pattern" type="NullablePointer[Cairopattern]"/>
+       <usearg name="x" type="F64"/>
+       <usearg name="y" type="F64"/>
+     </useargs>
+  </use>
+  <use id="_8418" name="cairo_mesh_pattern_set_control_point"
+     ponyname="cairo_mesh_pattern_set_control_point"
+     fid="f307"
+     lineno="2868"
+     rv="None">
+     <useargs>
+       <usearg name="pattern" type="NullablePointer[Cairopattern]"/>
+       <usearg name="pointnum" type="U32"/>
+       <usearg name="x" type="F64"/>
+       <usearg name="y" type="F64"/>
+     </useargs>
+  </use>
+  <use id="_8419" name="cairo_mesh_pattern_set_corner_color_rgb"
+     ponyname="cairo_mesh_pattern_set_corner_color_rgb"
+     fid="f307"
+     lineno="2873"
+     rv="None">
+     <useargs>
+       <usearg name="pattern" type="NullablePointer[Cairopattern]"/>
+       <usearg name="cornernum" type="U32"/>
+       <usearg name="red" type="F64"/>
+       <usearg name="green" type="F64"/>
+       <usearg name="blue" type="F64"/>
+     </useargs>
+  </use>
+  <use id="_8420" name="cairo_mesh_pattern_set_corner_color_rgba"
+     ponyname="cairo_mesh_pattern_set_corner_color_rgba"
+     fid="f307"
+     lineno="2878"
+     rv="None">
+     <useargs>
+       <usearg name="pattern" type="NullablePointer[Cairopattern]"/>
+       <usearg name="cornernum" type="U32"/>
+       <usearg name="red" type="F64"/>
+       <usearg name="green" type="F64"/>
+       <usearg name="blue" type="F64"/>
+       <usearg name="alpha" type="F64"/>
+     </useargs>
+  </use>
+  <use id="_8421" name="cairo_pattern_set_matrix"
+     ponyname="cairo_pattern_set_matrix"
+     fid="f307"
+     lineno="2884"
+     rv="None">
+     <useargs>
+       <usearg name="pattern" type="NullablePointer[Cairopattern]"/>
+       <usearg name="matrix" type="NullablePointer[Cairomatrix]"/>
+     </useargs>
+  </use>
+  <use id="_8422" name="cairo_pattern_get_matrix"
+     ponyname="cairo_pattern_get_matrix"
+     fid="f307"
+     lineno="2888"
+     rv="None">
+     <useargs>
+       <usearg name="pattern" type="NullablePointer[Cairopattern]"/>
+       <usearg name="matrix" type="NullablePointer[Cairomatrix]"/>
+     </useargs>
+  </use>
+  <use id="_8425" name="cairo_pattern_set_extend"
+     ponyname="cairo_pattern_set_extend"
+     fid="f307"
+     lineno="2924"
+     rv="None">
+     <useargs>
+       <usearg name="pattern" type="NullablePointer[Cairopattern]"/>
+       <usearg name="extend" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_8426" name="cairo_pattern_get_extend"
+     ponyname="cairo_pattern_get_extend"
+     fid="f307"
+     lineno="2927"
+     rv="I32">
+     <useargs>
+       <usearg name="pattern" type="NullablePointer[Cairopattern]"/>
+     </useargs>
+  </use>
+  <use id="_8429" name="cairo_pattern_set_filter"
+     ponyname="cairo_pattern_set_filter"
+     fid="f307"
+     lineno="2959"
+     rv="None">
+     <useargs>
+       <usearg name="pattern" type="NullablePointer[Cairopattern]"/>
+       <usearg name="filter" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_8430" name="cairo_pattern_get_filter"
+     ponyname="cairo_pattern_get_filter"
+     fid="f307"
+     lineno="2962"
+     rv="I32">
+     <useargs>
+       <usearg name="pattern" type="NullablePointer[Cairopattern]"/>
+     </useargs>
+  </use>
+  <use id="_8431" name="cairo_pattern_get_rgba"
+     ponyname="cairo_pattern_get_rgba"
+     fid="f307"
+     lineno="2965"
+     rv="I32">
+     <useargs>
+       <usearg name="pattern" type="NullablePointer[Cairopattern]"/>
+       <usearg name="red" type="Pointer[F64]"/>
+       <usearg name="green" type="Pointer[F64]"/>
+       <usearg name="blue" type="Pointer[F64]"/>
+       <usearg name="alpha" type="Pointer[F64]"/>
+     </useargs>
+  </use>
+  <use id="_8432" name="cairo_pattern_get_surface"
+     ponyname="cairo_pattern_get_surface"
+     fid="f307"
+     lineno="2970"
+     rv="I32">
+     <useargs>
+       <usearg name="pattern" type="NullablePointer[Cairopattern]"/>
+       <usearg name="surface" type="NullablePointer[NullablePointer[Cairosurface]]"/>
+     </useargs>
+  </use>
+  <use id="_8433" name="cairo_pattern_get_color_stop_rgba"
+     ponyname="cairo_pattern_get_color_stop_rgba"
+     fid="f307"
+     lineno="2975"
+     rv="I32">
+     <useargs>
+       <usearg name="pattern" type="NullablePointer[Cairopattern]"/>
+       <usearg name="index" type="I32"/>
+       <usearg name="offset" type="Pointer[F64]"/>
+       <usearg name="red" type="Pointer[F64]"/>
+       <usearg name="green" type="Pointer[F64]"/>
+       <usearg name="blue" type="Pointer[F64]"/>
+       <usearg name="alpha" type="Pointer[F64]"/>
+     </useargs>
+  </use>
+  <use id="_8434" name="cairo_pattern_get_color_stop_count"
+     ponyname="cairo_pattern_get_color_stop_count"
+     fid="f307"
+     lineno="2981"
+     rv="I32">
+     <useargs>
+       <usearg name="pattern" type="NullablePointer[Cairopattern]"/>
+       <usearg name="count" type="Pointer[I32]"/>
+     </useargs>
+  </use>
+  <use id="_8435" name="cairo_pattern_get_linear_points"
+     ponyname="cairo_pattern_get_linear_points"
+     fid="f307"
+     lineno="2985"
+     rv="I32">
+     <useargs>
+       <usearg name="pattern" type="NullablePointer[Cairopattern]"/>
+       <usearg name="x0" type="Pointer[F64]"/>
+       <usearg name="y0" type="Pointer[F64]"/>
+       <usearg name="x1" type="Pointer[F64]"/>
+       <usearg name="y1" type="Pointer[F64]"/>
+     </useargs>
+  </use>
+  <use id="_8436" name="cairo_pattern_get_radial_circles"
+     ponyname="cairo_pattern_get_radial_circles"
+     fid="f307"
+     lineno="2990"
+     rv="I32">
+     <useargs>
+       <usearg name="pattern" type="NullablePointer[Cairopattern]"/>
+       <usearg name="x0" type="Pointer[F64]"/>
+       <usearg name="y0" type="Pointer[F64]"/>
+       <usearg name="r0" type="Pointer[F64]"/>
+       <usearg name="x1" type="Pointer[F64]"/>
+       <usearg name="y1" type="Pointer[F64]"/>
+       <usearg name="r1" type="Pointer[F64]"/>
+     </useargs>
+  </use>
+  <use id="_8437" name="cairo_mesh_pattern_get_patch_count"
+     ponyname="cairo_mesh_pattern_get_patch_count"
+     fid="f307"
+     lineno="2995"
+     rv="I32">
+     <useargs>
+       <usearg name="pattern" type="NullablePointer[Cairopattern]"/>
+       <usearg name="count" type="Pointer[U32]"/>
+     </useargs>
+  </use>
+  <use id="_8438" name="cairo_mesh_pattern_get_path"
+     ponyname="cairo_mesh_pattern_get_path"
+     fid="f307"
+     lineno="2999"
+     rv="NullablePointer[Cairopath]">
+     <useargs>
+       <usearg name="pattern" type="NullablePointer[Cairopattern]"/>
+       <usearg name="patchnum" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_8439" name="cairo_mesh_pattern_get_corner_color_rgba"
+     ponyname="cairo_mesh_pattern_get_corner_color_rgba"
+     fid="f307"
+     lineno="3003"
+     rv="I32">
+     <useargs>
+       <usearg name="pattern" type="NullablePointer[Cairopattern]"/>
+       <usearg name="patchnum" type="U32"/>
+       <usearg name="cornernum" type="U32"/>
+       <usearg name="red" type="Pointer[F64]"/>
+       <usearg name="green" type="Pointer[F64]"/>
+       <usearg name="blue" type="Pointer[F64]"/>
+       <usearg name="alpha" type="Pointer[F64]"/>
+     </useargs>
+  </use>
+  <use id="_8440" name="cairo_mesh_pattern_get_control_point"
+     ponyname="cairo_mesh_pattern_get_control_point"
+     fid="f307"
+     lineno="3010"
+     rv="I32">
+     <useargs>
+       <usearg name="pattern" type="NullablePointer[Cairopattern]"/>
+       <usearg name="patchnum" type="U32"/>
+       <usearg name="pointnum" type="U32"/>
+       <usearg name="x" type="Pointer[F64]"/>
+       <usearg name="y" type="Pointer[F64]"/>
+     </useargs>
+  </use>
+  <use id="_8441" name="cairo_matrix_init"
+     ponyname="cairo_matrix_init"
+     fid="f307"
+     lineno="3018"
+     rv="None">
+     <useargs>
+       <usearg name="matrix" type="NullablePointer[Cairomatrix]"/>
+       <usearg name="xx" type="F64"/>
+       <usearg name="yx" type="F64"/>
+       <usearg name="xy" type="F64"/>
+       <usearg name="yy" type="F64"/>
+       <usearg name="x0" type="F64"/>
+       <usearg name="y0" type="F64"/>
+     </useargs>
+  </use>
+  <use id="_8442" name="cairo_matrix_init_identity"
+     ponyname="cairo_matrix_init_identity"
+     fid="f307"
+     lineno="3024"
+     rv="None">
+     <useargs>
+       <usearg name="matrix" type="NullablePointer[Cairomatrix]"/>
+     </useargs>
+  </use>
+  <use id="_8443" name="cairo_matrix_init_translate"
+     ponyname="cairo_matrix_init_translate"
+     fid="f307"
+     lineno="3027"
+     rv="None">
+     <useargs>
+       <usearg name="matrix" type="NullablePointer[Cairomatrix]"/>
+       <usearg name="tx" type="F64"/>
+       <usearg name="ty" type="F64"/>
+     </useargs>
+  </use>
+  <use id="_8444" name="cairo_matrix_init_scale"
+     ponyname="cairo_matrix_init_scale"
+     fid="f307"
+     lineno="3031"
+     rv="None">
+     <useargs>
+       <usearg name="matrix" type="NullablePointer[Cairomatrix]"/>
+       <usearg name="sx" type="F64"/>
+       <usearg name="sy" type="F64"/>
+     </useargs>
+  </use>
+  <use id="_8445" name="cairo_matrix_init_rotate"
+     ponyname="cairo_matrix_init_rotate"
+     fid="f307"
+     lineno="3035"
+     rv="None">
+     <useargs>
+       <usearg name="matrix" type="NullablePointer[Cairomatrix]"/>
+       <usearg name="radians" type="F64"/>
+     </useargs>
+  </use>
+  <use id="_8446" name="cairo_matrix_translate"
+     ponyname="cairo_matrix_translate"
+     fid="f307"
+     lineno="3039"
+     rv="None">
+     <useargs>
+       <usearg name="matrix" type="NullablePointer[Cairomatrix]"/>
+       <usearg name="tx" type="F64"/>
+       <usearg name="ty" type="F64"/>
+     </useargs>
+  </use>
+  <use id="_8447" name="cairo_matrix_scale"
+     ponyname="cairo_matrix_scale"
+     fid="f307"
+     lineno="3042"
+     rv="None">
+     <useargs>
+       <usearg name="matrix" type="NullablePointer[Cairomatrix]"/>
+       <usearg name="sx" type="F64"/>
+       <usearg name="sy" type="F64"/>
+     </useargs>
+  </use>
+  <use id="_8448" name="cairo_matrix_rotate"
+     ponyname="cairo_matrix_rotate"
+     fid="f307"
+     lineno="3045"
+     rv="None">
+     <useargs>
+       <usearg name="matrix" type="NullablePointer[Cairomatrix]"/>
+       <usearg name="radians" type="F64"/>
+     </useargs>
+  </use>
+  <use id="_8449" name="cairo_matrix_invert"
+     ponyname="cairo_matrix_invert"
+     fid="f307"
+     lineno="3048"
+     rv="I32">
+     <useargs>
+       <usearg name="matrix" type="NullablePointer[Cairomatrix]"/>
+     </useargs>
+  </use>
+  <use id="_8450" name="cairo_matrix_multiply"
+     ponyname="cairo_matrix_multiply"
+     fid="f307"
+     lineno="3051"
+     rv="None">
+     <useargs>
+       <usearg name="result" type="NullablePointer[Cairomatrix]"/>
+       <usearg name="a" type="NullablePointer[Cairomatrix]"/>
+       <usearg name="b" type="NullablePointer[Cairomatrix]"/>
+     </useargs>
+  </use>
+  <use id="_8451" name="cairo_matrix_transform_distance"
+     ponyname="cairo_matrix_transform_distance"
+     fid="f307"
+     lineno="3056"
+     rv="None">
+     <useargs>
+       <usearg name="matrix" type="NullablePointer[Cairomatrix]"/>
+       <usearg name="dx" type="Pointer[F64]"/>
+       <usearg name="dy" type="Pointer[F64]"/>
+     </useargs>
+  </use>
+  <use id="_8452" name="cairo_matrix_transform_point"
+     ponyname="cairo_matrix_transform_point"
+     fid="f307"
+     lineno="3060"
+     rv="None">
+     <useargs>
+       <usearg name="matrix" type="NullablePointer[Cairomatrix]"/>
+       <usearg name="x" type="Pointer[F64]"/>
+       <usearg name="y" type="Pointer[F64]"/>
+     </useargs>
+  </use>
+  <use id="_8457" name="cairo_region_create"
+     ponyname="cairo_region_create"
+     fid="f307"
+     lineno="3098"
+     rv="NullablePointer[Cairoregion]">
+     <useargs/>
+  </use>
+  <use id="_8458" name="cairo_region_create_rectangle"
+     ponyname="cairo_region_create_rectangle"
+     fid="f307"
+     lineno="3101"
+     rv="NullablePointer[Cairoregion]">
+     <useargs>
+       <usearg name="rectangle" type="NullablePointer[Cairorectangleint]"/>
+     </useargs>
+  </use>
+  <use id="_8459" name="cairo_region_create_rectangles"
+     ponyname="cairo_region_create_rectangles"
+     fid="f307"
+     lineno="3104"
+     rv="NullablePointer[Cairoregion]">
+     <useargs>
+       <usearg name="rects" type="NullablePointer[Cairorectangleint]"/>
+       <usearg name="count" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_8460" name="cairo_region_copy"
+     ponyname="cairo_region_copy"
+     fid="f307"
+     lineno="3108"
+     rv="NullablePointer[Cairoregion]">
+     <useargs>
+       <usearg name="original" type="NullablePointer[Cairoregion]"/>
+     </useargs>
+  </use>
+  <use id="_8461" name="cairo_region_reference"
+     ponyname="cairo_region_reference"
+     fid="f307"
+     lineno="3111"
+     rv="NullablePointer[Cairoregion]">
+     <useargs>
+       <usearg name="region" type="NullablePointer[Cairoregion]"/>
+     </useargs>
+  </use>
+  <use id="_8462" name="cairo_region_destroy"
+     ponyname="cairo_region_destroy"
+     fid="f307"
+     lineno="3114"
+     rv="None">
+     <useargs>
+       <usearg name="region" type="NullablePointer[Cairoregion]"/>
+     </useargs>
+  </use>
+  <use id="_8463" name="cairo_region_equal"
+     ponyname="cairo_region_equal"
+     fid="f307"
+     lineno="3117"
+     rv="I32">
+     <useargs>
+       <usearg name="a" type="NullablePointer[Cairoregion]"/>
+       <usearg name="b" type="NullablePointer[Cairoregion]"/>
+     </useargs>
+  </use>
+  <use id="_8464" name="cairo_region_status"
+     ponyname="cairo_region_status"
+     fid="f307"
+     lineno="3120"
+     rv="I32">
+     <useargs>
+       <usearg name="region" type="NullablePointer[Cairoregion]"/>
+     </useargs>
+  </use>
+  <use id="_8465" name="cairo_region_get_extents"
+     ponyname="cairo_region_get_extents"
+     fid="f307"
+     lineno="3123"
+     rv="None">
+     <useargs>
+       <usearg name="region" type="NullablePointer[Cairoregion]"/>
+       <usearg name="extents" type="NullablePointer[Cairorectangleint]"/>
+     </useargs>
+  </use>
+  <use id="_8466" name="cairo_region_num_rectangles"
+     ponyname="cairo_region_num_rectangles"
+     fid="f307"
+     lineno="3127"
+     rv="I32">
+     <useargs>
+       <usearg name="region" type="NullablePointer[Cairoregion]"/>
+     </useargs>
+  </use>
+  <use id="_8467" name="cairo_region_get_rectangle"
+     ponyname="cairo_region_get_rectangle"
+     fid="f307"
+     lineno="3130"
+     rv="None">
+     <useargs>
+       <usearg name="region" type="NullablePointer[Cairoregion]"/>
+       <usearg name="nth" type="I32"/>
+       <usearg name="rectangle" type="NullablePointer[Cairorectangleint]"/>
+     </useargs>
+  </use>
+  <use id="_8468" name="cairo_region_is_empty"
+     ponyname="cairo_region_is_empty"
+     fid="f307"
+     lineno="3135"
+     rv="I32">
+     <useargs>
+       <usearg name="region" type="NullablePointer[Cairoregion]"/>
+     </useargs>
+  </use>
+  <use id="_8469" name="cairo_region_contains_rectangle"
+     ponyname="cairo_region_contains_rectangle"
+     fid="f307"
+     lineno="3138"
+     rv="I32">
+     <useargs>
+       <usearg name="region" type="NullablePointer[Cairoregion]"/>
+       <usearg name="rectangle" type="NullablePointer[Cairorectangleint]"/>
+     </useargs>
+  </use>
+  <use id="_8470" name="cairo_region_contains_point"
+     ponyname="cairo_region_contains_point"
+     fid="f307"
+     lineno="3142"
+     rv="I32">
+     <useargs>
+       <usearg name="region" type="NullablePointer[Cairoregion]"/>
+       <usearg name="x" type="I32"/>
+       <usearg name="y" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_8471" name="cairo_region_translate"
+     ponyname="cairo_region_translate"
+     fid="f307"
+     lineno="3145"
+     rv="None">
+     <useargs>
+       <usearg name="region" type="NullablePointer[Cairoregion]"/>
+       <usearg name="dx" type="I32"/>
+       <usearg name="dy" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_8472" name="cairo_region_subtract"
+     ponyname="cairo_region_subtract"
+     fid="f307"
+     lineno="3148"
+     rv="I32">
+     <useargs>
+       <usearg name="dst" type="NullablePointer[Cairoregion]"/>
+       <usearg name="other" type="NullablePointer[Cairoregion]"/>
+     </useargs>
+  </use>
+  <use id="_8473" name="cairo_region_subtract_rectangle"
+     ponyname="cairo_region_subtract_rectangle"
+     fid="f307"
+     lineno="3151"
+     rv="I32">
+     <useargs>
+       <usearg name="dst" type="NullablePointer[Cairoregion]"/>
+       <usearg name="rectangle" type="NullablePointer[Cairorectangleint]"/>
+     </useargs>
+  </use>
+  <use id="_8474" name="cairo_region_intersect"
+     ponyname="cairo_region_intersect"
+     fid="f307"
+     lineno="3155"
+     rv="I32">
+     <useargs>
+       <usearg name="dst" type="NullablePointer[Cairoregion]"/>
+       <usearg name="other" type="NullablePointer[Cairoregion]"/>
+     </useargs>
+  </use>
+  <use id="_8475" name="cairo_region_intersect_rectangle"
+     ponyname="cairo_region_intersect_rectangle"
+     fid="f307"
+     lineno="3158"
+     rv="I32">
+     <useargs>
+       <usearg name="dst" type="NullablePointer[Cairoregion]"/>
+       <usearg name="rectangle" type="NullablePointer[Cairorectangleint]"/>
+     </useargs>
+  </use>
+  <use id="_8476" name="cairo_region_union"
+     ponyname="cairo_region_union"
+     fid="f307"
+     lineno="3162"
+     rv="I32">
+     <useargs>
+       <usearg name="dst" type="NullablePointer[Cairoregion]"/>
+       <usearg name="other" type="NullablePointer[Cairoregion]"/>
+     </useargs>
+  </use>
+  <use id="_8477" name="cairo_region_union_rectangle"
+     ponyname="cairo_region_union_rectangle"
+     fid="f307"
+     lineno="3165"
+     rv="I32">
+     <useargs>
+       <usearg name="dst" type="NullablePointer[Cairoregion]"/>
+       <usearg name="rectangle" type="NullablePointer[Cairorectangleint]"/>
+     </useargs>
+  </use>
+  <use id="_8478" name="cairo_region_xor"
+     ponyname="cairo_region_xor"
+     fid="f307"
+     lineno="3169"
+     rv="I32">
+     <useargs>
+       <usearg name="dst" type="NullablePointer[Cairoregion]"/>
+       <usearg name="other" type="NullablePointer[Cairoregion]"/>
+     </useargs>
+  </use>
+  <use id="_8479" name="cairo_region_xor_rectangle"
+     ponyname="cairo_region_xor_rectangle"
+     fid="f307"
+     lineno="3172"
+     rv="I32">
+     <useargs>
+       <usearg name="dst" type="NullablePointer[Cairoregion]"/>
+       <usearg name="rectangle" type="NullablePointer[Cairorectangleint]"/>
+     </useargs>
+  </use>
+  <use id="_8480" name="cairo_debug_reset_static_data"
+     ponyname="cairo_debug_reset_static_data"
+     fid="f307"
+     lineno="3177"
+     rv="None">
+     <useargs/>
+  </use></uses>
+</castxml2pony>
+
