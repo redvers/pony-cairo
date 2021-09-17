@@ -1,0 +1,12 @@
+{
+  "packages": ["CairoSys"],
+  "deps": [],
+  "info": {
+    "description": "Pony port of Cairo",
+    "homepage": "",
+    "license": "",
+    "documentation_url": "",
+    "version": "0.1",
+    "name": "CairoSys"
+  }
+}
